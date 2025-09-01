@@ -89,17 +89,12 @@ export default function Home() {
 
       {/* About Me Section */}
       <AboutSection/>
-      {/* <div
+      <div
         id="about"
-        className="h-screen flex flex-col items-center justify-center bg-[#2A313A] px-10 text-center"
+        className="h-screen flex flex-col items-center justify-center bg-[#1E242C] px-10 text-center"
       >
-        <h2 className="text-4xl font-bold mb-6">About Me</h2>
-        <p className="max-w-3xl text-gray-300">
-          Hi, I am a passionate mobile developer with experience in building
-          high-quality applications. I love crafting clean UI/UX and writing
-          efficient code.
-        </p>
-      </div> */}
+        <AboutSection/>
+      </div>
 
       {/* Projects Section */}
       <div
