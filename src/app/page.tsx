@@ -88,7 +88,7 @@ export default function Home() {
       <HomeSection />
 
       {/* About Me Section */}
-      <AboutSection/>
+      {/* <AboutSection/> */}
       <div
         id="about"
         className="h-screen flex flex-col items-center justify-center bg-[#1E242C] px-10 text-center"
