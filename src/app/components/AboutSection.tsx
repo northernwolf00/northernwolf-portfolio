@@ -1,83 +1,111 @@
 "use client";
 
+
+"use client";
+
 import { useState } from "react";
 import Image from "next/image";
 
 export default function AboutSection() {
   const [expanded, setExpanded] = useState(false);
-
   return (
     <section
-      id="about"
-      className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-[#2A313A] px-10 py-20 gap-10 relative overflow-hidden"
+      id="home"
+      className="h-screen flex flex-col justify-center items-center bg-[#1E242C] text-white px-10"
     >
-      {/* Left Side - Text */}
-      <div className="flex-1 max-w-xl text-white relative">
-        {/* Top-left SVG icon */}
-        <Image
-          src="/note.svg" // put your svg in /public
-          alt="Note Icon"
-          width={40}
-          height={40}
-          className="absolute -top-8 -left-10 opacity-70"
-        />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center w-full max-w-6xl">
 
-        <h2 className="text-5xl font-extrabold mb-6">
-          About <span className="text-cyan-400">me</span>
-        </h2>
+        {/* Left Side - Text with Arrow */}
+        <div className="flex flex-col gap-6 relative">
+          {/* Arrow image positioned left */}
 
-        <p className="text-gray-300 leading-relaxed">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis. Class
-          aptent taciti sociosqu ad litora torquent per conubia nostra, per
-          inceptos himenaeos. Curabitur tempus urna at turpis condimentum
-          lobortis....
-        </p>
+          <div className="flex-1 max-w-xl text-white relative">
+            {/* Top-left SVG icon */}
+            <Image
+              src="/music.svg" // put your svg in /public
+              alt="Note Icon"
+              width={40}
+              height={40}
+              className="absolute -top-30 -left-5 "
+            />
 
-        {expanded && (
-          <p className="text-gray-300 leading-relaxed mt-4">
-            Ut commodo efficitur neque. Vivamus at nibh sit amet libero
-            scelerisque elementum in id nisl. Praesent non justo id sapien
-            egestas tincidunt.
-          </p>
-        )}
+            <h2 className="text-5xl font-extrabold mb-6 flex items-center gap-3">
+              About <span className="text-cyan-400 ml-2">me</span>
+              <Image
+                src="/lightbulb.svg" // replace with your SVG path
+                alt="Decoration Icon"
+                width={40}
+                height={40}
+                className="inline-block"
+              />
+            </h2>
 
-        <button
-          onClick={() => setExpanded(!expanded)}
-          className="mt-4 text-cyan-400 hover:underline font-semibold"
-        >
-          {expanded ? "Read less" : "Read more"}
-        </button>
 
-        {/* Bottom-left SVG */}
-        <Image
-          src="/curve.svg" // put your svg in /public
-          alt="Curve Arrow"
-          width={80}
-          height={80}
-          className="absolute -bottom-10 left-0 opacity-70"
-        />
-      </div>
+            <p className="text-gray-300 leading-relaxed">
+              I’m Guwanch Haldurdyyev, a passionate Mobile Developer with 4+ years of
+              experience building modern Android and iOS applications. I enjoy crafting
+              clean, scalable, and user-friendly solutions with Kotlin and Swift, focusing
+              on smooth performance and intuitive design.
+            </p>
 
-      {/* Right Side - Illustration */}
-      <div className="flex-1 flex items-center justify-center relative">
-        <div className="relative w-[350px] h-[350px]">
+            {expanded && (
+              <p className="text-gray-300 leading-relaxed mt-4">
+                Over the years, I’ve worked on apps with subscription management, video
+                streaming, and restaurant platforms — published on both Google Play and the
+                App Store. My expertise spans Firebase integration, CI/CD pipelines, and
+                performance optimization. I love tackling challenging problems and creating
+                mobile experiences that people enjoy using every day.
+              </p>
+            )}
+
+            <button
+              onClick={() => setExpanded(!expanded)}
+              className="mt-4 text-cyan-400 hover:underline font-semibold"
+            >
+              {expanded ? "Read less" : "Read more"}
+            </button>
+
+            {/* Bottom-left SVG */}
+            <Image
+              src="/arrow_upp.svg"
+              alt="Curve Arrow"
+              width={80}
+              height={80}
+              className={`absolute right-30 ${expanded ? "top-80" : "top-60"}`}
+            />
+
+          </div>
+
+
+        </div>
+
+
+        {/* Right Side - Illustration */}
+        <div className="relative w-[400px] h-[400px] pr-0 ml-auto">
+          {/* Background Image */}
           <Image
-            src="/about-1.png"
-            alt="About Illustration 1"
-            width={350}
-            height={350}
-            className="rounded-2xl shadow-lg absolute top-0 left-0 z-10"
+            src="/bg_about.png"
+            alt="Background"
+            fill
+            className="object-contain"
+            priority
           />
+
+          {/* Person Illustration */}
           <Image
-            src="/about-2.png"
-            alt="About Illustration 2"
-            width={350}
-            height={350}
-            className="rounded-2xl shadow-lg absolute bottom-0 right-0 z-0 opacity-90"
+            src="/person_about.png"
+            alt="Person"
+            width={300}
+            height={300}
+            className="absolute top-40 right-30"
+            priority
           />
         </div>
+
       </div>
+
+
+
     </section>
   );
 }
