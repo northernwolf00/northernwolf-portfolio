@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import HomeSection from "./components/HomeSection";
+import AboutSection from "./components/AboutSection";
 
 const sections = ["home", "about", "projects", "contact"];
 
@@ -87,7 +88,8 @@ export default function Home() {
       <HomeSection />
 
       {/* About Me Section */}
-      <div
+      <AboutSection/>
+      {/* <div
         id="about"
         className="h-screen flex flex-col items-center justify-center bg-[#2A313A] px-10 text-center"
       >
@@ -97,7 +99,7 @@ export default function Home() {
           high-quality applications. I love crafting clean UI/UX and writing
           efficient code.
         </p>
-      </div>
+      </div> */}
 
       {/* Projects Section */}
       <div
