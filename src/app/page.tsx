@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
+import ProjectsSection from "./components/ProjectsSection";
 
 const sections = ["home", "about", "projects", "contact"];
 
@@ -101,11 +102,12 @@ export default function Home() {
         id="projects"
         className="h-screen flex flex-col items-center justify-center bg-[#1E242C] px-10 text-center"
       >
-        <h2 className="text-4xl font-bold mb-6 text-cyan-400">Projects</h2>
+        <ProjectsSection/>
+        {/* <h2 className="text-4xl font-bold mb-6 text-cyan-400">Projects</h2>
         <p className="max-w-3xl text-gray-300">
           Here are some of my recent projects. I specialize in mobile apps
           using React Native and cross-platform solutions.
-        </p>
+        </p> */}
         {/* You can add project cards/components here */}
       </div>
 
