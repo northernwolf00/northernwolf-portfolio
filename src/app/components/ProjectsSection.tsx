@@ -34,121 +34,135 @@ const projects: Project[] = [
     id: 3,
     title: "Kebapchy Menu",
     image: "/kebap.png",
-    link: "",
-    tags: ["#iOS"],
+    link: "https://apps.apple.com/tm/app/kebapcy-menu/id6475279950",
+    tags: ["#iOS", "#Flutter"],
     category: "iOS",
     description: "Digital menu app designed for restaurants.",
   },
   {
     id: 4,
-    title: "Work Position UI",
-    image: "/projects/work.png",
-    link: "https://example.com/work",
-    tags: ["#UI", "#Figma"],
-    category: "Work",
-    description: "UI mockup for work position management system.",
+    title: "UC DAÝY",
+    image: "/ucdyy.png",
+    link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
+    tags: ["#Android", "#iOS", "#Flutter"],
+    category: "Android",
+    description: "A logistics app to track and manage shipments efficiently.",
   },
   {
     id: 5,
-    title: "Work Position UI",
-    image: "/projects/work.png",
-    link: "https://example.com/work",
-    tags: ["#UI", "#Figma"],
-    category: "Work",
-    description: "UI mockup for work position management system.",
+    title: "Balykcy Menu",
+    image: "/balykchy.png",
+    link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
+    tags: ["#iOS", "#Flutter"],
+    category: "iOS",
+    description: "Digital menu app designed for restaurants.",
   },
+
   {
     id: 6,
-    title: "Work Position UI",
-    image: "/projects/work.png",
-    link: "https://example.com/work",
-    tags: ["#UI", "#Figma"],
-    category: "Work",
-    description: "UI mockup for work position management system.",
+    title: "Mado Menu",
+    image: "/balykchy.png",
+    link: "https://apps.apple.com/tm/app/pikir-menu5/id6475025463",
+    tags: ["#iOS", "#Flutter"],
+    category: "iOS",
+    description: "Digital menu app designed for restaurants.",
   },
   {
     id: 7,
-    title: "106 Cargo",
-    image: "/cargo.png",
-    link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
-    tags: ["#Android", "#iOS", "#Flutter"],
-    category: "Android",
-    description: "A logistics app to track and manage shipments efficiently.",
+    title: "Gala Menu",
+    image: "/gala.png",
+    link: "https://apps.apple.com/tm/app/gala-menu5/id6474479694",
+    tags: ["#iOS", "#Flutter"],
+    category: "iOS",
+    description: "Digital menu app designed for restaurants.",
   },
-  {
+{
     id: 8,
-    title: "Aýdymçy",
-    image: "/musicl.png",
-    link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
-    tags: ["#Android", "#iOS", "#KMP"],
+    title: "Ozan",
+    image: "/ozan.png",
+    link: "https://play.google.com/store/apps/details?id=com.tpsadvertising.ozan&hl=en",
+    tags: ["#iOS","#Android","#Flutter"],
     category: "Android",
-    description: "Lyrics and music player app for discovering and listening to songs.",
+    description: "eCommerce app, now updated for 2023 with Android & iOS support.",
   },
+
   {
     id: 9,
-    title: "106 Cargo",
-    image: "/cargo.png",
-    link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
-    tags: ["#Android", "#iOS", "#Flutter"],
+    title: "Picker",
+    image: "/picker.png",
+    link: "https://asmanexpress.com/",
+    tags: ["#Android","#Java"],
     category: "Android",
-    description: "A logistics app to track and manage shipments efficiently.",
+    description: "Picker App for AsmanExpres",
   },
-  {
+    {
     id: 10,
-    title: "Aýdymçy",
-    image: "/musicl.png",
-    link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
-    tags: ["#Android", "#iOS", "#KMP"],
+    title: "DURALGA",
+    image: "/duralga.png",
+    link: "https://play.google.com/store/apps/details?id=com.takykcheshme.gps&hl=en",
+    tags: ["#Android","#iOS","#Flutter"],
     category: "Android",
-    description: "Lyrics and music player app for discovering and listening to songs.",
+    description: "App Support Specialist",
   },
-  {
+ {
     id: 11,
-    title: "106 Cargo",
-    image: "/cargo.png",
-    link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
-    tags: ["#Android", "#iOS", "#Flutter"],
+    title: "Onlaýn taksi (driver)",
+    image: "/taxid.png",
+    link: "https://play.google.com/store/apps/details?id=com.takykcheshme.online_taxi_driver&hl=en",
+    tags: ["#Android","#Java"],
     category: "Android",
-    description: "A logistics app to track and manage shipments efficiently.",
+    description: "App Support Specialist",
   },
+
+
   {
     id: 12,
-    title: "106 Cargo",
-    image: "/cargo.png",
-    link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
-    tags: ["#Android", "#iOS", "#Flutter"],
-    category: "Android",
-    description: "A logistics app to track and manage shipments efficiently.",
+    title: "Turkmenportal",
+    image: "/portal.png",
+    link: "https://turkmenportal.com/",
+    tags: ["#Mobile developer"],
+    category: "Work",
+    description: "Nov 2021 - Mar 2023 | Mobile developer",
   },
-  {
+   {
     id: 13,
-    title: "Aýdymçy",
-    image: "/musicl.png",
-    link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
-    tags: ["#Android", "#iOS", "#KMP"],
-    category: "Android",
-    description: "Lyrics and music player app for discovering and listening to songs.",
+    title: "Freelance jobs",
+    image: "/freelance.png",
+    link: "https://github.com/northernwolf00",
+    tags: ["#Mobile developer"],
+    category: "Work",
+    description: "Mar 2023 - May 2023 | Mobile developer",
   },
-  {
+   {
     id: 14,
-    title: "106 Cargo",
-    image: "/cargo.png",
-    link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
-    tags: ["#Android", "#iOS", "#Flutter"],
-    category: "Android",
-    description: "A logistics app to track and manage shipments efficiently.",
+    title: "Takyk Ulgam HJ",
+    image: "/takyk.png",
+    link: "https://takykulgam.com.tm/",
+    tags: ["#Mobile developer"],
+    category: "Work",
+    description: "Apr 2023 - Oct 2023 | Mobile developer",
   },
-  {
+   {
     id: 15,
-    title: "Aýdymçy",
-    image: "/musicl.png",
-    link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
-    tags: ["#Android", "#iOS", "#KMP"],
-    category: "Android",
-    description: "Lyrics and music player app for discovering and listening to songs.",
+    title: "Pikir",
+    image: "/pikir.png",
+    link: "https://www.pikir.biz/",
+    tags: ["#Mobile developer"],
+    category: "Work",
+    description: "Dec 2023 - Mar 2024 | Mobile developer",
   },
-  
-  
+   {
+    id: 16,
+    title: "Sanly Hyzmat",
+    image: "/freelance.png",
+    link: "",
+    tags: ["#Mobile developer"],
+    category: "Work",
+    description: "Mar 2024 - Dec 2024 | Mobile developer",
+  },
+
+
+
 ];
 
 const categories = ["All", "Android", "iOS", "Work"];
@@ -177,11 +191,10 @@ export default function ProjectsSection() {
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 ${
-                activeCategory === cat
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 ${activeCategory === cat
                   ? "bg-cyan-500 text-white shadow-lg shadow-cyan-500/30"
                   : "bg-white/10 backdrop-blur-md text-gray-200 hover:bg-cyan-600 hover:text-white border border-white/20"
-              }`}
+                }`}
             >
               {cat}
             </button>
@@ -190,51 +203,51 @@ export default function ProjectsSection() {
 
         {/* Grid of Projects */}
         <div className="max-h-[70vh] overflow-y-auto scrollbar-hide pr-2">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="group p-3 rounded-lg backdrop-blur-xl bg-white/10 shadow-md flex flex-col items-center border border-white/20 hover:bg-white/20 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
-            >
-             {/* Image */}
-<div className="relative w-full h-20 sm:h-24 md:h-28 mb-2 overflow-hidden rounded-[15px]">
-  <img
-    src={project.image}
-    alt={project.title}
-    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
-  />
-</div>
-
-
-              {/* Title */}
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-semibold hover:text-cyan-400 transition-colors mb-1 text-center"
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            {filteredProjects.map((project) => (
+              <div
+                key={project.id}
+                className="group p-3 rounded-lg backdrop-blur-xl bg-white/10 shadow-md flex flex-col items-center border border-white/20 hover:bg-white/20 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
               >
-                {project.title}
-              </a>
+                {/* Image */}
+                <div className="relative w-full h-20 sm:h-24 md:h-28 mb-2 overflow-hidden rounded-[15px]">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                  />
+                </div>
 
-              {/* Description */}
-              <p className="text-xs text-gray-300 text-center mb-2 line-clamp-2">
-                {project.description}
-              </p>
 
-              {/* Tags */}
-              <div className="flex flex-wrap justify-center gap-1">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="text-[10px] px-2 py-0.5 bg-cyan-500/20 text-cyan-400 rounded-full border border-cyan-500/30"
-                  >
-                    {tag}
-                  </span>
-                ))}
+                {/* Title */}
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-semibold hover:text-cyan-400 transition-colors mb-1 text-center"
+                >
+                  {project.title}
+                </a>
+
+                {/* Description */}
+                <p className="text-xs text-gray-300 text-center mb-2 line-clamp-2">
+                  {project.description}
+                </p>
+
+                {/* Tags */}
+                <div className="flex flex-wrap justify-center gap-1">
+                  {project.tags.map((tag, index) => (
+                    <span
+                      key={index}
+                      className="text-[10px] px-2 py-0.5 bg-cyan-500/20 text-cyan-400 rounded-full border border-cyan-500/30"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </div>
 
         {/* Empty State */}
