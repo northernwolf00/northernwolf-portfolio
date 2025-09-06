@@ -42,21 +42,22 @@ export default function AboutSection() {
 
 
             <p className="text-gray-300 leading-relaxed">
-              I’m Guwanch Haldurdyyev, a passionate Mobile Developer with 4+ years of
-              experience building modern Android and iOS applications. I enjoy crafting
-              clean, scalable, and user-friendly solutions with Kotlin and Swift, focusing
-              on smooth performance and intuitive design.
+              I’m Guwanch Haldurdyyev, a passionate Mobile Developer with 4+ years of experience
+              creating high-quality Android and iOS applications. I specialize in building clean,
+              scalable, and user-friendly apps using Kotlin and Swift, with a focus on smooth
+              performance and intuitive design.
             </p>
 
             {expanded && (
               <p className="text-gray-300 leading-relaxed mt-4">
-                Over the years, I’ve worked on apps with subscription management, video
-                streaming, and restaurant platforms — published on both Google Play and the
-                App Store. My expertise spans Firebase integration, CI/CD pipelines, and
-                performance optimization. I love tackling challenging problems and creating
-                mobile experiences that people enjoy using every day.
+                Throughout my career, I’ve developed apps across subscription management, video
+                streaming, and restaurant platforms, successfully published on both Google Play and
+                the App Store. My expertise includes Firebase integration, CI/CD pipelines, and
+                performance optimization. I thrive on solving complex problems and crafting mobile
+                experiences that delight users every day.
               </p>
             )}
+
 
             <button
               onClick={() => setExpanded(!expanded)}

@@ -56,7 +56,11 @@ export default function Home() {
     <div className="min-h-screen bg-[#1E242C] text-white">
       {/* Navbar */}
       <nav className="fixed top-0 left-0 w-full flex justify-between items-center px-10 py-4 bg-[#222831] shadow-md z-50">
-        <h1 className="text-xl font-bold">GoogaDev</h1>
+        <h1 className="text-xl font-bold flex items-center gap-2">
+  <img src="/horse2.png" alt="GoogaDev Logo" className="w-6 h-6" />
+  GoogaDev
+</h1>
+
         <ul className="flex gap-8">
           {sections.map((id) => (
             <li
