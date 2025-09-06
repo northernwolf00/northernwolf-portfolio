@@ -1,12 +1,15 @@
 "use client";
 
 import Image from "next/image";
+import Navbar from "./Navbar";
 
 export default function Footer() {
     return (
         <footer className="bg-[#1E242C] py-10 px-10 flex flex-col items-center justify-center gap-8">
             {/* Navbar links */}
-            <div className="flex items-center gap-12 text-gray-200">
+
+            <Navbar/>
+            {/* <div className="flex items-center gap-12 text-gray-200">
                 <a href="#home" className="flex items-center gap-2 hover:text-white transition">
                     <Image src="/home.png" alt="Home" width={20} height={20} />
                     <span>Home</span>
@@ -19,26 +22,26 @@ export default function Footer() {
                     <Image src="/phone.png" alt="Contact" width={20} height={20} />
                     <span>Contact</span>
                 </a>
-            </div>
+            </div> */}
 
             {/* Social media icons */}
             <div className="flex gap-6">
                 <a
-                    href="https://www.facebook.com/yourpage"
+                    href="https://github.com/northernwolf00"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2A313A] hover:bg-[#3b3f45] transition"
                 >
                     <Image
-                        src="/facebook.png"
-                        alt="Facebook"
+                        src="/github.png"
+                        alt="GitHub"
                         width={20}
                         height={20}
                         className="object-contain"
                     />
                 </a>
                 <a
-                    href="https://www.instagram.com/yourprofile"
+                    href="https://www.instagram.com/guwanc_haldurdyyev/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2A313A] hover:bg-[#3b3f45] transition"
@@ -52,7 +55,7 @@ export default function Footer() {
                     />
                 </a>
                 <a
-                    href="https://www.twitter.com/yourhandle"
+                    href="https://x.com/northernerwolf7?t=yv25QRaObsG-nQKI0stpVw&s=35"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2A313A] hover:bg-[#3b3f45] transition"
@@ -66,7 +69,7 @@ export default function Footer() {
                     />
                 </a>
                 <a
-                    href="https://www.youtube.com/yourchannel"
+                    href="https://t.me/northern_wolf00"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-12 h-12 flex items-center justify-center rounded-full bg-[#2A313A] hover:bg-[#3b3f45] transition"
