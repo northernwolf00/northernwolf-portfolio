@@ -76,12 +76,12 @@ const projects: Project[] = [
     category: "iOS",
     description: "Digital menu app designed for restaurants.",
   },
-{
+  {
     id: 8,
     title: "Ozan",
     image: "/ozan.png",
     link: "https://play.google.com/store/apps/details?id=com.tpsadvertising.ozan&hl=en",
-    tags: ["#iOS","#Android","#Flutter"],
+    tags: ["#iOS", "#Android", "#Flutter"],
     category: "Android",
     description: "eCommerce app, now updated for 2023 with Android & iOS support.",
   },
@@ -91,25 +91,25 @@ const projects: Project[] = [
     title: "Picker",
     image: "/picker.png",
     link: "https://asmanexpress.com/",
-    tags: ["#Android","#Java"],
+    tags: ["#Android", "#Java"],
     category: "Android",
     description: "Picker App for AsmanExpres",
   },
-    {
+  {
     id: 10,
     title: "DURALGA",
     image: "/duralga.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.gps&hl=en",
-    tags: ["#Android","#iOS","#Flutter"],
+    tags: ["#Android", "#iOS", "#Flutter"],
     category: "Android",
     description: "App Support Specialist",
   },
- {
+  {
     id: 11,
     title: "Onlaýn taksi (driver)",
     image: "/taxid.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.online_taxi_driver&hl=en",
-    tags: ["#Android","#Java"],
+    tags: ["#Android", "#Java"],
     category: "Android",
     description: "App Support Specialist",
   },
@@ -124,7 +124,7 @@ const projects: Project[] = [
     category: "Work",
     description: "Nov 2021 - Mar 2023 | Mobile developer",
   },
-   {
+  {
     id: 13,
     title: "Freelance jobs",
     image: "/freelance.png",
@@ -133,7 +133,7 @@ const projects: Project[] = [
     category: "Work",
     description: "Mar 2023 - May 2023 | Mobile developer",
   },
-   {
+  {
     id: 14,
     title: "Takyk Ulgam HJ",
     image: "/takyk.png",
@@ -142,7 +142,7 @@ const projects: Project[] = [
     category: "Work",
     description: "Apr 2023 - Oct 2023 | Mobile developer",
   },
-   {
+  {
     id: 15,
     title: "Pikir",
     image: "/pikir.png",
@@ -151,7 +151,7 @@ const projects: Project[] = [
     category: "Work",
     description: "Dec 2023 - Mar 2024 | Mobile developer",
   },
-   {
+  {
     id: 16,
     title: "Sanly Hyzmat",
     image: "/freelance.png",
@@ -192,8 +192,8 @@ export default function ProjectsSection() {
               key={cat}
               onClick={() => setActiveCategory(cat)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 ${activeCategory === cat
-                  ? "bg-cyan-500 text-white shadow-lg shadow-cyan-500/30"
-                  : "bg-white/10 backdrop-blur-md text-gray-200 hover:bg-cyan-600 hover:text-white border border-white/20"
+                ? "bg-cyan-500 text-white shadow-lg shadow-cyan-500/30"
+                : "bg-white/10 backdrop-blur-md text-gray-200 hover:bg-cyan-600 hover:text-white border border-white/20"
                 }`}
             >
               {cat}
@@ -209,15 +209,15 @@ export default function ProjectsSection() {
                 key={project.id}
                 className="group p-3 rounded-lg backdrop-blur-xl bg-white/10 shadow-md flex flex-col items-center border border-white/20 hover:bg-white/20 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
               >
+
                 {/* Image */}
-                <div className="relative w-full h-20 sm:h-24 md:h-28 mb-2 overflow-hidden rounded-[15px]">
+                <div className="relative w-full h-10 sm:h-14 md:h-38 mb-3 overflow-hidden rounded-[20px]">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-
 
                 {/* Title */}
                 <a

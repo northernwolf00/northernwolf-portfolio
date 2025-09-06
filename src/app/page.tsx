@@ -3,6 +3,7 @@ import Image from "next/image";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
+import ContactSection from "./components/ContactSection";
 import { useEffect, useState } from "react";
 
 const sections = ["home", "about", "projects", "contact"];
@@ -116,8 +117,8 @@ export default function Home() {
       */}
 
       {/* Contact Section */}
-      <div id="contact" className="h-screen flex items-center justify-center bg-[#2A313A]">
-        <h2 className="text-4xl">Contact Section</h2>
+      <div id="contact" className="h-screen flex items-center justify-center bg-[#1E242C] ">
+        <ContactSection />
       </div>
     </div>
   );
