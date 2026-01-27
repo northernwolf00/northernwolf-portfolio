@@ -177,21 +177,21 @@ export default function ProjectsSection() {
       : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section className="relative min-h-screen w-full flex flex-col">
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+    <section className="relative min-h-screen w-full flex flex-col py-16 sm:py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-3 sm:px-4 md:px-6 lg:px-8">
         {/* Title */}
-        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-12 text-left">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 text-center md:text-left">
           <span className="text-white">My Recent</span>
           <span className="text-cyan-400 ml-2">Works</span>
         </h2>
 
         {/* Category Tabs */}
-        <div className="flex flex-wrap gap-3 mb-12">
+        <div className="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mb-6 sm:mb-8 md:mb-12">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setActiveCategory(cat)}
-              className={`px-4 py-2 rounded-full text-sm font-medium transition-all transform hover:scale-105 ${activeCategory === cat
+              className={`px-3 sm:px-4 md:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all transform active:scale-95 hover:scale-105 ${activeCategory === cat
                 ? "bg-cyan-500 text-white shadow-lg shadow-cyan-500/30"
                 : "bg-white/10 backdrop-blur-md text-gray-200 hover:bg-cyan-600 hover:text-white border border-white/20"
                 }`}
@@ -202,48 +202,65 @@ export default function ProjectsSection() {
         </div>
 
         {/* Grid of Projects */}
-        <div className="max-h-[70vh] overflow-y-auto scrollbar-hide pr-2">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="w-full pb-6 sm:pb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group p-3 rounded-lg backdrop-blur-xl bg-white/10 shadow-md flex flex-col items-center border border-white/20 hover:bg-white/20 hover:border-cyan-400/50 hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
+                className="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-cyan-400/40 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/20"
               >
-
-                {/* Image */}
-                <div className="relative w-full h-10 sm:h-14 md:h-38 mb-3 overflow-hidden rounded-[20px]">
+                {/* Image Container */}
+                <div className="relative w-full aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
+
+                  {/* Gradient Overlay on Hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4 sm:pb-6">
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-4 sm:px-6 py-2 sm:py-2.5 bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-white text-sm sm:text-base font-semibold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 flex items-center gap-2 shadow-lg shadow-cyan-500/50"
+                    >
+                      View Project
+                      <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
                 </div>
 
-                {/* Title */}
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-semibold hover:text-cyan-400 transition-colors mb-1 text-center"
-                >
-                  {project.title}
-                </a>
+                {/* Content */}
+                <div className="p-3 sm:p-4 md:p-5">
+                  {/* Title */}
+                  <h3 className="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-1">
+                    {project.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-xs text-gray-300 text-center mb-2 line-clamp-2">
-                  {project.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
+                    {project.description}
+                  </p>
 
-                {/* Tags */}
-                <div className="flex flex-wrap justify-center gap-1">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="text-[10px] px-2 py-0.5 bg-cyan-500/20 text-cyan-400 rounded-full border border-cyan-500/30"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    {project.tags.map((tag, index) => (
+                      <span
+                        key={index}
+                        className="text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 rounded-full border border-cyan-500/30 font-medium hover:border-cyan-400/50 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Decorative gradient border glow */}
+                <div className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
+                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 blur-xl"></div>
                 </div>
               </div>
             ))}
