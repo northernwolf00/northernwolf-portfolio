@@ -1,5 +1,7 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
+import { BookOpen } from "lucide-react";
 import HomeSection from "./components/HomeSection";
 import AboutSection from "./components/AboutSection";
 import ProjectsSection from "./components/ProjectsSection";
@@ -65,7 +67,7 @@ export default function Home() {
         </h1>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-4 lg:gap-6 xl:gap-8">
+        <ul className="hidden md:flex gap-4 lg:gap-6 xl:gap-8 items-center">
           {sections.map((id) => (
             <li
               key={id}
@@ -80,6 +82,26 @@ export default function Home() {
                   id === "projects" ? "Projects" : "Contact"}
             </li>
           ))}
+
+          {/* 
+          // [FEATURE: Blocs Navigation Link]
+          // Currently deactivated as requested. 
+          // Uncomment to restore the "Blocs" button in the desktop navbar.
+          <li className="flex items-center">
+            <Link
+              href="/blocs"
+              className="relative group px-4 py-1.5 rounded-full overflow-hidden transition-all duration-300 active:scale-95 flex items-center h-fit"
+            >
+              <span className="relative z-10 text-sm lg:text-base font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">
+                Blocs
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 opacity-100 group-hover:opacity-20 transition-opacity rounded-full"></div>
+              <div className="absolute inset-0 border border-cyan-400/20 group-hover:border-cyan-400/50 rounded-full transition-colors"></div>
+              <div className="absolute inset-0 bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
+            </Link>
+          </li> 
+          */}
+
         </ul>
 
         {/* Mobile Hamburger Menu */}
@@ -111,9 +133,24 @@ export default function Home() {
                       id === "projects" ? "💼 Projects" : "📧 Contact"}
                 </li>
               ))}
+              {/* 
+              // [FEATURE: Mobile Blocs Link]
+              // Currently deactivated as requested.
+              // Uncomment to restore "Explore Blocs" in the mobile menu.
+              <li className="list-none mt-2">
+                <Link
+                  href="/blocs"
+                  className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl text-base font-bold transition-all duration-300 active:scale-[0.98] bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 text-cyan-400 shadow-lg shadow-cyan-500/5"
+                >
+                  <BookOpen className="w-5 h-5" />
+                  <span>Explore Blocs</span>
+                </Link>
+              </li>
+              */}
             </ul>
           </div>
         )}
+
       </nav>
       {/* Sections */}
       <HomeSection />

@@ -15,6 +15,16 @@ const projects: Project[] = [
 
   {
     id: 1,
+    title: "Ahal Info",
+    image: "/ahalinfo.png",
+    link: "https://play.google.com/store/apps/details?id=com.googadev.ahal_info",
+    tags: ["#Android", "#iOS", "#Flutter"],
+    category: "Android",
+    description: "Ahal Info is an application that provides information about Ahal province, Turkmenistan. It includes information about the province, its cities, districts, and other relevant information.",
+  },
+
+  {
+    id: 2,
     title: "Kerwen Taxi",
     image: "/kerwentaxi.png",
     link: "https://play.google.com/store/apps/details?id=com.kerwen.taxi",
@@ -23,7 +33,7 @@ const projects: Project[] = [
     description: "Taxi app for Turkmenistan",
   },
   {
-    id: 2,
+    id: 3,
     title: "Kerwen Taxi",
     image: "/kerwentaxi.png",
     link: "https://apps.apple.com/tm/app/kerwen-taxi/id6759301850",
@@ -33,7 +43,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "Kerwen Driver",
     image: "/kerwendriver.png",
     link: "https://play.google.com/store/apps/details?id=com.kerwen.driver",
@@ -42,7 +52,7 @@ const projects: Project[] = [
     description: "Taxi app for Turkmenistan",
   },
   {
-    id: 4,
+    id: 5,
     title: "elkitap",
     image: "/elkitap.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.elkitap&hl=tr",
@@ -53,7 +63,7 @@ const projects: Project[] = [
 
 
   {
-    id: 5,
+    id: 6,
     title: "106 Cargo",
     image: "/cargo.png",
     link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
@@ -62,7 +72,7 @@ const projects: Project[] = [
     description: "A logistics app to track and manage shipments efficiently.",
   },
   {
-    id: 6,
+    id: 7,
     title: "Aýdymçy",
     image: "/musicl.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
@@ -71,7 +81,7 @@ const projects: Project[] = [
     description: "Lyrics and music player app for discovering and listening to songs.",
   },
   {
-    id: 7,
+    id: 8,
     title: "Kebapchy Menu",
     image: "/kebap.png",
     link: "https://apps.apple.com/tm/app/kebapcy-menu/id6475279950",
@@ -80,16 +90,16 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 8,
+    id: 9,
     title: "UC DAÝY",
     image: "/ucdyy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
     tags: ["#Android", "#iOS", "#Flutter"],
     category: "Android",
-    description: "A logistics app to track and manage shipments efficiently.",
+    description: "Game app for Turkmenistan",
   },
   {
-    id: 9,
+    id: 10,
     title: "Balykcy Menu",
     image: "/balykchy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
@@ -99,7 +109,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 10,
+    id: 11,
     title: "Mado Menu",
     image: "/balykchy.png",
     link: "https://apps.apple.com/tm/app/pikir-menu5/id6475025463",
@@ -108,7 +118,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 11,
+    id: 12,
     title: "Gala Menu",
     image: "/gala.png",
     link: "https://apps.apple.com/tm/app/gala-menu5/id6474479694",
@@ -117,7 +127,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 12,
+    id: 13,
     title: "Ozan",
     image: "/ozan.png",
     link: "https://play.google.com/store/apps/details?id=com.tpsadvertising.ozan&hl=en",
@@ -127,7 +137,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 13,
+    id: 14,
     title: "Picker",
     image: "/picker.png",
     link: "https://asmanexpress.com/",
@@ -136,7 +146,7 @@ const projects: Project[] = [
     description: "Picker App for AsmanExpres",
   },
   {
-    id: 14,
+    id: 15,
     title: "DURALGA",
     image: "/duralga.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.gps&hl=en",
@@ -145,7 +155,7 @@ const projects: Project[] = [
     description: "App Support Specialist",
   },
   {
-    id: 15,
+    id: 16,
     title: "Onlaýn taksi (driver)",
     image: "/taxid.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.online_taxi_driver&hl=en",
@@ -156,7 +166,7 @@ const projects: Project[] = [
 
 
   {
-    id: 16,
+    id: 17,
     title: "Turkmenportal",
     image: "/portal.png",
     link: "https://turkmenportal.com/",
@@ -165,7 +175,7 @@ const projects: Project[] = [
     description: "Nov 2021 - Mar 2023 | Mobile developer",
   },
   {
-    id: 17,
+    id: 18,
     title: "Freelance jobs",
     image: "/freelance.png",
     link: "https://github.com/northernwolf00",
@@ -174,7 +184,7 @@ const projects: Project[] = [
     description: "Mar 2023 - May 2023 | Mobile developer",
   },
   {
-    id: 18,
+    id: 19,
     title: "Takyk Ulgam HJ",
     image: "/takyk.png",
     link: "https://takykulgam.com.tm/",
@@ -183,7 +193,7 @@ const projects: Project[] = [
     description: "Apr 2023 - Oct 2023 | Mobile developer",
   },
   {
-    id: 19,
+    id: 20,
     title: "Pikir",
     image: "/pikir.png",
     link: "https://www.pikir.biz/",
@@ -192,7 +202,7 @@ const projects: Project[] = [
     description: "Dec 2023 - Mar 2024 | Mobile developer",
   },
   {
-    id: 20,
+    id: 21,
     title: "Sanly Hyzmat",
     image: "/freelance.png",
     link: "",
