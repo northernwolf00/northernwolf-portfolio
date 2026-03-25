@@ -93,7 +93,7 @@ export default function AboutSection() {
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-8 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
-        <span className="text-xs sm:text-sm text-gray-400">See My Work</span>
+
         <div className="w-6 h-10 border-2 border-cyan-400 rounded-full flex justify-center pt-2">
           <div className="w-1 h-2 bg-cyan-400 rounded-full animate-bounce"></div>
         </div>

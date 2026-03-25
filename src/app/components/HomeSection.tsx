@@ -40,7 +40,7 @@ export default function HomeSection() {
             </button>
             <button className="px-6 sm:px-7 md:px-8 py-2.5 sm:py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center gap-2 hover:bg-white/20 hover:border-white/30 active:scale-95 transition-all text-sm sm:text-base font-medium">
               <a
-                href="https://docs.google.com/document/d/1JJKh6aM6jtB4bN40NZHG3S1oWaO4Eon1N0D7NwYQnig/edit?usp=sharing"
+                href="https://docs.google.com/document/d/1cpO0zwdQLYb_W3v8R2hs0Ueqxp7KjOrPj8xFg6Gp3_g/edit?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
