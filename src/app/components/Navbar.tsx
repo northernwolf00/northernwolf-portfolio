@@ -17,14 +17,14 @@ export default function Navbar() {
         <span>About me</span>
       </Link>
 
-      <Link href="/blocs" className="relative group flex items-center gap-2 px-4 py-1.5 rounded-full overflow-hidden transition-all duration-300">
+      {/* <Link href="/blocs" className="relative group flex items-center gap-2 px-4 py-1.5 rounded-full overflow-hidden transition-all duration-300">
         <span className="relative z-10 flex items-center gap-2 font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:text-white transition-colors duration-300 text-sm">
           <Image src="/book.png" alt="Blocs" width={18} height={18} className="transition-all" />
           Blocs
         </span>
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 group-hover:from-cyan-400 group-hover:to-blue-500 transition-all duration-300 rounded-full"></div>
         <div className="absolute inset-0 border border-cyan-400/20 group-hover:border-transparent rounded-full transition-colors"></div>
-      </Link>
+      </Link> */}
 
 
       <div className="relative">
