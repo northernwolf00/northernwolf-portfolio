@@ -83,10 +83,7 @@ export default function Home() {
             </li>
           ))}
 
-          {/* 
-          // [FEATURE: Blocs Navigation Link]
-          // Currently deactivated as requested. 
-          // Uncomment to restore the "Blocs" button in the desktop navbar.
+
           <li className="flex items-center">
             <Link
               href="/blocs"
@@ -99,8 +96,8 @@ export default function Home() {
               <div className="absolute inset-0 border border-cyan-400/20 group-hover:border-cyan-400/50 rounded-full transition-colors"></div>
               <div className="absolute inset-0 bg-cyan-400/20 blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
             </Link>
-          </li> 
-          */}
+          </li>
+
 
         </ul>
 
@@ -133,10 +130,8 @@ export default function Home() {
                       id === "projects" ? "💼 Projects" : "📧 Contact"}
                 </li>
               ))}
-              {/* 
-              // [FEATURE: Mobile Blocs Link]
-              // Currently deactivated as requested.
-              // Uncomment to restore "Explore Blocs" in the mobile menu.
+
+
               <li className="list-none mt-2">
                 <Link
                   href="/blocs"
@@ -146,7 +141,7 @@ export default function Home() {
                   <span>Explore Blocs</span>
                 </Link>
               </li>
-              */}
+
             </ul>
           </div>
         )}

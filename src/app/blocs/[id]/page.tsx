@@ -2,77 +2,120 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, BookOpen, Clock, User, Share2, Bookmark } from "lucide-react";
+import { ArrowLeft, BookOpen, Clock, User, Share2, Check, X } from "lucide-react";
 import { useParams } from "next/navigation";
+import { useState, useEffect } from "react";
 
 const blocs = [
   {
     id: 1,
-    title: "The Future of Mobile Development in 2026",
-    excerpt: "Exploring the latest trends in KMP, Flutter, and native development.",
+    title: "Architecting a White-Label Mobile Application Framework",
+    excerpt: "A deep dive into building a configuration-driven mobile app architecture that enables seamless multi-brand deployment from a single codebase — eliminating redundancy and accelerating time-to-market.",
     content: `
-      The mobile development landscape is evolving faster than ever. As we head into 2026, several key technologies are taking center stage. 
-      Kotlin Multiplatform (KMP) has matured significantly, allowing developers to share business logic across Android, iOS, and Web more seamlessly than ever before.
-      
-      Meanwhile, Flutter continues to dominate the cross-platform UI space with its high performance and developer-friendly experience. Native development isn't going anywhere either, as Swift and Kotlin introduce powerful new features that deepen our connection with the hardware.
-      
-      In this article, we'll dive deep into:
-      - The rise of Compose Multiplatform
-      - AI-assisted coding in mobile development
-      - The importance of platform-specific optimizations
-      - Predictions for the next decade of mobile apps
+      In modern product development, scalability is not just a technical consideration — it is a business imperative. When tasked with serving multiple clients under distinct brand identities, the conventional approach of maintaining separate codebases quickly becomes unsustainable. To address this, I designed and implemented a White-Label Mobile Application framework built around a centralized, configuration-driven architecture.
+
+      At its core, the system is governed by a single JSON configuration file that acts as the single source of truth for every client deployment. This file encapsulates all variant-specific parameters, allowing the application to adapt dynamically without requiring any changes to the underlying source code.
+
+      The configuration schema is structured across five primary domains:
+
+      → Identity: Application name, icon assets, and splash screen visuals.
+      → Aesthetics: Brand color palettes, typography definitions, and theme variants.
+      → Feature Flags: Granular toggles for capabilities such as in-app messaging, payment gateways, and advertising modules.
+      → Infrastructure: Environment-specific API endpoint routing for development, staging, and production.
+      → Operations: Maintenance mode orchestration and version management controls.
+
+      The Architectural Advantage
+
+      The impact of this approach extends well beyond code cleanliness. By decoupling brand identity from application logic, the framework delivers measurable business value:
+
+      - Operational Efficiency: A single build pipeline serves all clients, eliminating the overhead of parallel development tracks.
+      - Simplified Maintenance: Bug fixes, performance improvements, and feature updates propagate universally — no client is left on a stale version.
+      - Rapid Onboarding: Deploying a new brand requires only a new configuration file, reducing launch timelines from weeks to hours.
+      - Controlled Feature Rollout: Capabilities can be enabled or disabled per client at runtime, without requiring a new release.
+
+      For organizations building SaaS platforms or managing multi-tenant mobile products, this configuration-driven pattern represents a significant architectural investment with compounding returns. It positions your codebase to scale horizontally across clients while remaining vertically maintainable by a lean engineering team.
     `,
-    date: "March 20, 2026",
+    date: "April 6, 2026",
     author: "Guwanch",
-    image: "/bg_project.png",
-    readTime: "5 min read",
+    image: "/white_label.png",
+    readTime: "4 min read",
   },
   {
     id: 2,
-    title: "Mastering Clean Architecture in React",
-    excerpt: "How to structure your Next.js projects for scalability and maintainability.",
+    title: "Eliminating API Boilerplate in Flutter with OpenAPI Generator",
+    excerpt: "A practical guide to automating REST API client generation in Flutter using the openapi_generator package — saving hours of manual work while keeping your client code perfectly synchronized with backend contracts.",
     content: `
-      Clean Architecture isn't just for backend systems or mobile apps. Bringing these principles to the React and Next.js world can transform a tangled codebase into a manageable, testable masterpiece.
-      
-      By separating concerns into layers—Domain, Data, and Presentation—we ensure that our business logic isn't tied to the UI. This makes it easier to swap out libraries, test individual components, and scale our application as requirements grow.
-      
-      Key takeaways in this guide:
-      - Identifying entities and use cases
-      - Implementing the Repository pattern in React
-      - Testing domain logic without rendering components
-      - Structuring Next.js folders for Clean Architecture
+      One of the most persistent sources of technical debt in Flutter development is the manual maintenance of API client code. As backends evolve, keeping Dart models, HTTP logic, and endpoint definitions in sync becomes a fragile, time-consuming process prone to human error. The openapi_generator package offers a principled solution: derive your entire API client directly from your OpenAPI specification.
+
+      How It Works
+
+      The package integrates natively with Flutter's build_runner system. Given an OpenAPI specification — whether hosted remotely or stored locally — it automatically generates a fully typed, production-ready Dart client, complete with data models, serialization logic, and endpoint abstractions.
+
+      → Consumes a local or remote OpenAPI specification file.
+      → Produces a strongly typed Dart/Flutter API client.
+      → Integrates seamlessly into the existing build_runner pipeline.
+
+      What This Eliminates
+
+      - Hand-written HTTP request and response handling.
+      - Manual JSON serialization and deserialization.
+      - The ongoing effort of keeping client code aligned with backend schema changes.
+
+      A minimal configuration is all that is required to get started:
+
+      @Openapi(
+        inputSpec: RemoteSpec(path: 'https://api.example.com/spec.json'),
+        generatorName: Generator.dio,
+        outputDirectory: 'api/your_api',
+      )
+      class ApiConfig {}
+
+      Running the following command triggers the generation process:
+      \`flutter pub run build_runner build\`
+
+      Production Considerations
+
+      Through practical experience, a few configurations prove especially valuable in real-world projects:
+
+      - Leverage .openapi-generator-ignore to safeguard files that contain custom, manually authored logic from being overwritten on subsequent generations.
+      - Apply dependency_overrides in the generated pubspec.yaml to resolve version conflicts without modifying the generated output directly.
+      - Keep skipIfSpecUnchanged: true (the default) enabled to ensure regeneration only occurs when the specification has actually changed, preserving build performance.
+
+      The most significant benefit emerges over time: when the backend team updates the API contract, a single command is sufficient to bring the client into full alignment. No manual review of changed endpoints, no risk of missed fields — just a reliable, automated synchronization between your mobile application and its backend services.
     `,
-    date: "March 15, 2026",
+    date: "March 20, 2026",
     author: "Guwanch",
-    image: "/bg_home.png",
-    readTime: "8 min read",
+    image: "/open_api.png",
+    readTime: "5 min read",
   },
-  {
-    id: 3,
-    title: "Designing for the Modern Web",
-    excerpt: "A deep dive into glassmorphism, micro-animations, and premium UX.",
-    content: `
-      Modern web design is about more than just aesthetics; it's about creating an immersive experience that feels alive. Glassmorphism, characterized by multi-layered transparency and vibrant colors, has become a hallmark of premium UI.
-      
-      Adding micro-animations and subtle transitions can significantly improve user engagement by providing visual feedback and guiding the user's focus. In this deep dive, we'll explore how to balance performance with visual complexity.
-      
-      Topics covered:
-      - CSS Backdrop-filter and blur effects
-      - Creating smooth entrance animations with Framer Motion
-      - Accessibility considerations for complex UI
-      - The future of 3D elements in web design
-    `,
-    date: "March 10, 2026",
-    author: "Guwanch",
-    image: "/background_pattern.svg",
-    readTime: "6 min read",
-  },
+
 ];
 
 export default function BlocDetailPage() {
   const params = useParams();
+  const [copied, setCopied] = useState(false);
+  const [showFullImage, setShowFullImage] = useState(false);
   const id = parseInt(params.id as string);
   const bloc = blocs.find((b) => b.id === id);
+
+  // Disable scroll when full image is shown
+  useEffect(() => {
+    if (showFullImage) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [showFullImage]);
+
+  const handleShare = () => {
+    const url = `https://northernwolf-portfolio.vercel.app/blocs/${id}`;
+    navigator.clipboard.writeText(url);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   if (!bloc) {
     return (
@@ -102,11 +145,21 @@ export default function BlocDetailPage() {
           <span className="font-bold text-xl tracking-tight hidden sm:inline">GoogaDev <span className="text-cyan-400">Blocs</span></span>
         </div>
         <div className="flex items-center gap-4">
-          <button className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-            <Share2 className="w-5 h-5" />
-          </button>
-          <button className="p-2 rounded-full bg-white/5 hover:bg-white/10 transition-colors">
-            <Bookmark className="w-5 h-5" />
+          <button
+            onClick={handleShare}
+            className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 hover:bg-white/10 transition-all active:scale-95 text-sm font-medium border border-white/5"
+          >
+            {copied ? (
+              <>
+                <Check className="w-4 h-4 text-cyan-400" />
+                <span className="text-cyan-400">Copied!</span>
+              </>
+            ) : (
+              <>
+                <Share2 className="w-4 h-4" />
+                <span>Share</span>
+              </>
+            )}
           </button>
         </div>
       </header>
@@ -129,7 +182,7 @@ export default function BlocDetailPage() {
               </div>
               <div>
                 <p className="text-white text-sm font-semibold">{bloc.author}</p>
-                <p className="text-xs">Developer & Designer</p>
+                <p className="text-xs">Mobile Developer</p>
               </div>
             </div>
             <div className="h-8 w-px bg-white/10 hidden md:block"></div>
@@ -145,15 +198,51 @@ export default function BlocDetailPage() {
         </div>
 
         {/* Hero Image */}
-        <div className="relative aspect-video rounded-3xl overflow-hidden mb-12 border border-white/10 shadow-2xl">
+        <div
+          className="relative aspect-video rounded-3xl overflow-hidden mb-12 border border-white/10 shadow-2xl cursor-zoom-in group"
+          onClick={() => setShowFullImage(true)}
+        >
           <Image
             src={bloc.image}
             alt={bloc.title}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-700 group-hover:scale-105"
             priority
           />
+          <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
+            <div className="px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 text-sm font-medium">
+              Click to Expand
+            </div>
+          </div>
         </div>
+
+        {/* Full Screen Image Overlay */}
+        {showFullImage && (
+          <div
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 md:p-10 transition-all duration-300"
+            onClick={() => setShowFullImage(false)}
+          >
+            <button
+              className="absolute top-6 right-6 p-3 rounded-full bg-white/5 hover:bg-white/10 transition-colors z-[110]"
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowFullImage(false);
+              }}
+            >
+              <X className="w-6 h-6 text-white" />
+            </button>
+            <div
+              className="relative w-full h-full max-w-7xl flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <img
+                src={bloc.image}
+                alt={bloc.title}
+                className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-in zoom-in-95 duration-300"
+              />
+            </div>
+          </div>
+        )}
 
         {/* Content */}
         <div className="prose prose-invert max-w-none">
@@ -168,7 +257,7 @@ export default function BlocDetailPage() {
         </div>
 
         {/* Newsletter / CTA */}
-        <div className="mt-20 p-8 rounded-3xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 text-center relative overflow-hidden">
+        {/* <div className="mt-20 p-8 rounded-3xl bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 text-center relative overflow-hidden">
           <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-400/20 blur-3xl -mr-16 -mt-16 rounded-full"></div>
           <h3 className="text-2xl font-bold mb-4 relative z-10">Enjoyed this article?</h3>
           <p className="text-gray-400 mb-8 relative z-10 max-w-lg mx-auto">
@@ -184,7 +273,7 @@ export default function BlocDetailPage() {
               Subscribe
             </button>
           </div>
-        </div>
+        </div> */}
       </main>
 
       {/* Footer Decoration */}
