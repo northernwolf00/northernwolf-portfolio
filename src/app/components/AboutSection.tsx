@@ -36,7 +36,7 @@ export default function AboutSection() {
             </h2>
 
             <p className="text-xs sm:text-sm md:text-base text-gray-300 leading-relaxed text-center md:text-left">
-              I&apos;m Guwanch Haldurdyyev, a passionate Mobile Developer with 4+ years of experience
+              I&apos;m Guwanch Haldurdyyev, a passionate Mobile Developer with 5+ years of experience
               creating high-quality Android and iOS applications. I specialize in building clean,
               scalable, and user-friendly apps using Kotlin and Swift, with a focus on smooth
               performance and intuitive design.
