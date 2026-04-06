@@ -6,7 +6,7 @@ import { ArrowLeft, BookOpen, Clock, User, Share2, Check, X } from "lucide-react
 import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 
-const blocs = [
+const blogs = [
   {
     id: 1,
     title: "Architecting a White-Label Mobile Application Framework",
@@ -91,12 +91,12 @@ const blocs = [
 
 ];
 
-export default function BlocDetailPage() {
+export default function BlogDetailPage() {
   const params = useParams();
   const [copied, setCopied] = useState(false);
   const [showFullImage, setShowFullImage] = useState(false);
   const id = parseInt(params.id as string);
-  const bloc = blocs.find((b) => b.id === id);
+  const blog = blogs.find((b) => b.id === id);
 
   // Disable scroll when full image is shown
   useEffect(() => {
@@ -111,19 +111,19 @@ export default function BlocDetailPage() {
   }, [showFullImage]);
 
   const handleShare = () => {
-    const url = `https://northernwolf-portfolio.vercel.app/blocs/${id}`;
+    const url = `https://northernwolf-portfolio.vercel.app/blogs/${id}`;
     navigator.clipboard.writeText(url);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
-  if (!bloc) {
+  if (!blog) {
     return (
       <div className="min-h-screen bg-[#1E242C] text-white flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold mb-4 text-cyan-400">Bloc Not Found</h1>
-          <Link href="/blocs" className="text-gray-400 hover:text-white transition-colors">
-            Return to Blocs
+          <h1 className="text-4xl font-bold mb-4 text-cyan-400">Blog Not Found</h1>
+          <Link href="/blogs" className="text-gray-400 hover:text-white transition-colors">
+            Return to Blogs
           </Link>
         </div>
       </div>
@@ -134,15 +134,15 @@ export default function BlocDetailPage() {
     <div className="min-h-screen bg-[#1E242C] text-white selection:bg-cyan-500/30">
       {/* Header */}
       <header className="fixed top-0 left-0 w-full bg-[#222831]/95 backdrop-blur-md border-b border-white/5 z-50 px-6 py-4 flex items-center justify-between">
-        <Link href="/blocs" className="flex items-center gap-2 group transition-all">
+        <Link href="/blogs" className="flex items-center gap-2 group transition-all">
           <div className="p-2 rounded-full bg-white/5 group-hover:bg-cyan-400/10 transition-colors">
             <ArrowLeft className="w-5 h-5 group-hover:text-cyan-400 transition-colors" />
           </div>
-          <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">Back to Blocs</span>
+          <span className="font-semibold text-gray-300 group-hover:text-white transition-colors">Back to Blogs</span>
         </Link>
         <div className="flex items-center gap-2">
           <img src="/horse2.png" alt="Logo" className="w-6 h-6" />
-          <span className="font-bold text-xl tracking-tight hidden sm:inline">GoogaDev <span className="text-cyan-400">Blocs</span></span>
+          <span className="font-bold text-xl tracking-tight hidden sm:inline">GoogaDev <span className="text-cyan-400">Blogs</span></span>
         </div>
         <div className="flex items-center gap-4">
           <button
@@ -172,7 +172,7 @@ export default function BlocDetailPage() {
             <span>Articles</span>
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold mb-8 leading-tight">
-            {bloc.title}
+            {blog.title}
           </h1>
 
           <div className="flex flex-wrap items-center gap-6 text-gray-400 border-y border-white/5 py-6">
@@ -181,18 +181,18 @@ export default function BlocDetailPage() {
                 G
               </div>
               <div>
-                <p className="text-white text-sm font-semibold">{bloc.author}</p>
+                <p className="text-white text-sm font-semibold">{blog.author}</p>
                 <p className="text-xs">Mobile Developer</p>
               </div>
             </div>
             <div className="h-8 w-px bg-white/10 hidden md:block"></div>
             <div className="flex items-center gap-2 text-sm">
               <Clock className="w-4 h-4" />
-              <span>{bloc.readTime}</span>
+              <span>{blog.readTime}</span>
             </div>
             <div className="flex items-center gap-2 text-sm">
               <User className="w-4 h-4" />
-              <span>{bloc.date}</span>
+              <span>{blog.date}</span>
             </div>
           </div>
         </div>
@@ -203,8 +203,8 @@ export default function BlocDetailPage() {
           onClick={() => setShowFullImage(true)}
         >
           <Image
-            src={bloc.image}
-            alt={bloc.title}
+            src={blog.image}
+            alt={blog.title}
             fill
             className="object-cover transition-transform duration-700 group-hover:scale-105"
             priority
@@ -236,8 +236,8 @@ export default function BlocDetailPage() {
               onClick={(e) => e.stopPropagation()}
             >
               <img
-                src={bloc.image}
-                alt={bloc.title}
+                src={blog.image}
+                alt={blog.title}
                 className="max-w-full max-h-full object-contain rounded-lg shadow-2xl animate-in zoom-in-95 duration-300"
               />
             </div>
@@ -247,10 +247,10 @@ export default function BlocDetailPage() {
         {/* Content */}
         <div className="prose prose-invert max-w-none">
           <p className="text-xl text-gray-300 leading-relaxed font-medium mb-10 border-l-4 border-cyan-400 pl-6 italic">
-            {bloc.excerpt}
+            {blog.excerpt}
           </p>
           <div className="text-gray-400 text-lg leading-loose space-y-6">
-            {bloc.content.split('\n').map((line, i) => (
+            {blog.content.split('\n').map((line, i) => (
               <p key={i}>{line.trim()}</p>
             ))}
           </div>
