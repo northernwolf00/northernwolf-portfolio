@@ -22,7 +22,7 @@ export default function ContactSection() {
     return (
         <section
             id="contact"
-            className="min-h-screen text-white flex flex-col justify-between py-16 sm:py-20"
+            className="min-h-screen text-white flex flex-col justify-between pt-16 pb-32 sm:pt-20 sm:pb-40"
         >
             {/* Main content */}
             <div className="flex flex-1 items-center justify-center px-3 sm:px-4 md:px-6 lg:px-10">

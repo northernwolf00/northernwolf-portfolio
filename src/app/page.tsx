@@ -166,13 +166,15 @@ export default function Home() {
         className="relative min-h-screen flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-10"
       >
         {/* Background Image using Next.js Image component */}
-        <Image
-          src="/bg_project.png"
-          alt="Background Pattern"
-          fill
-          className="object-cover"
-          priority={false}
-        />
+        {/* <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden flex items-center justify-center">
+          <Image
+            src="/bg_project.png"
+            alt="Background Pattern"
+            fill
+            className="object-contain scale-100 opacity-10"
+            priority={false}
+          />
+        </div> */}
 
         {/* Content */}
         <div className="relative z-10 w-full">

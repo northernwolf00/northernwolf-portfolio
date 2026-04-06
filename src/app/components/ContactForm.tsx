@@ -20,7 +20,7 @@ export default function ContactForm() {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full max-w-2xl">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-4 sm:gap-5 md:gap-6 w-full max-w-2xl pb-10">
             {/* Name Field */}
             <div>
                 <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-gray-300 mb-1.5 sm:mb-2">
@@ -75,7 +75,7 @@ export default function ContactForm() {
             {/* Submit Button */}
             <button
                 type="submit"
-                className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 bg-gradient-to-r from-cyan-400 to-cyan-500 text-black text-sm sm:text-base md:text-lg font-bold rounded-full hover:from-cyan-500 hover:to-cyan-600 active:scale-95 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 flex items-center justify-center gap-2 sm:gap-3"
+                className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-3 sm:py-3.5 md:py-4 mb-4 bg-gradient-to-r from-cyan-400 to-cyan-500 text-black text-sm sm:text-base md:text-lg font-bold rounded-full hover:from-cyan-500 hover:to-cyan-600 active:scale-95 transition-all shadow-lg shadow-cyan-500/30 hover:shadow-cyan-500/50 flex items-center justify-center gap-2 sm:gap-3"
             >
                 Send Message
                 <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
