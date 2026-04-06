@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, BookOpen, Clock, User } from "lucide-react";
 
-const blocs = [
+const blogs = [
   {
     id: 1,
     title: "Architecting a White-Label Mobile Application Framework",
@@ -26,7 +26,7 @@ const blocs = [
 
 ];
 
-export default function BlocsPage() {
+export default function BlogsPage() {
   return (
     <div className="min-h-screen bg-[#1E242C] text-white selection:bg-cyan-500/30">
       {/* Header */}
@@ -39,7 +39,7 @@ export default function BlocsPage() {
         </Link>
         <div className="flex items-center gap-2">
           <img src="/horse2.png" alt="Logo" className="w-6 h-6" />
-          <span className="font-bold text-xl tracking-tight">GoogaDev <span className="text-cyan-400">Blocs</span></span>
+          <span className="font-bold text-xl tracking-tight">GoogaDev <span className="text-cyan-400">Blogs</span></span>
         </div>
         <div className="w-32 hidden md:block"></div>
       </header>
@@ -52,30 +52,30 @@ export default function BlocsPage() {
             <span>Articles & Insights</span>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            My <span className="text-cyan-400">Blocs</span>
+            My <span className="text-cyan-400">Blogs</span>
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
             Welcome to my personal blog space where I share my thoughts on technology, development, and design.
           </p>
         </div>
 
-        {/* Blocs Grid */}
+        {/* Blogs Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blocs.map((bloc) => (
+          {blogs.map((blog) => (
             <Link
-              key={bloc.id}
-              href={`/blocs/${bloc.id}`}
+              key={blog.id}
+              href={`/blogs/${blog.id}`}
               className="group bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-cyan-400/40 transition-all duration-500 hover:shadow-2xl hover:shadow-cyan-500/10 active:scale-[0.98]"
             >
               <div className="relative aspect-video overflow-hidden">
                 <Image
-                  src={bloc.image}
-                  alt={bloc.title}
+                  src={blog.image}
+                  alt={blog.title}
                   fill
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute top-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-md rounded-full text-xs font-medium text-white">
-                  {bloc.readTime}
+                  {blog.readTime}
                 </div>
               </div>
 
@@ -83,24 +83,24 @@ export default function BlocsPage() {
                 <div className="flex items-center gap-4 text-xs text-gray-400 mb-4">
                   <div className="flex items-center gap-1.5 font-medium">
                     <User className="w-3.5 h-3.5" />
-                    <span>{bloc.author}</span>
+                    <span>{blog.author}</span>
                   </div>
                   <div className="flex items-center gap-1.5 font-medium">
                     <Clock className="w-3.5 h-3.5" />
-                    <span>{bloc.date}</span>
+                    <span>{blog.date}</span>
                   </div>
                 </div>
 
                 <h2 className="text-xl font-bold mb-3 group-hover:text-cyan-400 transition-colors line-clamp-2 text-white">
-                  {bloc.title}
+                  {blog.title}
                 </h2>
 
                 <p className="text-gray-400 text-sm mb-6 line-clamp-3 leading-relaxed">
-                  {bloc.excerpt}
+                  {blog.excerpt}
                 </p>
 
                 <div className="flex items-center gap-2 text-cyan-400 text-sm font-semibold group/btn">
-                  Read Full Bloc
+                  Read Full Blog
                   <div className="w-5 h-5 rounded-full bg-cyan-400/10 flex items-center justify-center group-hover/btn:translate-x-1 transition-transform">
                     <ArrowLeft className="w-3 h-3 rotate-180" />
                   </div>

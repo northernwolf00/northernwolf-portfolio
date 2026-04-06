@@ -86,11 +86,11 @@ export default function Home() {
 
           <li className="flex items-center">
             <Link
-              href="/blocs"
+              href="/blogs"
               className="relative group px-4 py-1.5 rounded-full overflow-hidden transition-all duration-300 active:scale-95 flex items-center h-fit"
             >
               <span className="relative z-10 text-sm lg:text-base font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent group-hover:text-white transition-colors duration-300">
-                Blocs
+                Blogs
               </span>
               <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 opacity-100 group-hover:opacity-20 transition-opacity rounded-full"></div>
               <div className="absolute inset-0 border border-cyan-400/20 group-hover:border-cyan-400/50 rounded-full transition-colors"></div>
@@ -134,11 +134,11 @@ export default function Home() {
 
               <li className="list-none mt-2">
                 <Link
-                  href="/blocs"
+                  href="/blogs"
                   className="flex items-center justify-center gap-2 w-full py-4 rounded-2xl text-base font-bold transition-all duration-300 active:scale-[0.98] bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-400/20 text-cyan-400 shadow-lg shadow-cyan-500/5"
                 >
                   <BookOpen className="w-5 h-5" />
-                  <span>Explore Blocs</span>
+                  <span>Explore Blogs</span>
                 </Link>
               </li>
 
