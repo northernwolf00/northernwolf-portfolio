@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 export default function Footer() {
     return (
-        <footer className="bg-[#1E242C] py-10 px-10 flex flex-col items-center justify-center gap-8">
+        <footer className="bg-[#1E242C] pt-10 pb-20 px-10 flex flex-col items-center justify-center gap-8">
             {/* Navbar links */}
 
             <Navbar/>

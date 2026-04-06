@@ -32,18 +32,9 @@ const projects: Project[] = [
     category: "Android",
     description: "Taxi app for Turkmenistan",
   },
-  {
-    id: 3,
-    title: "Kerwen Taxi",
-    image: "/kerwentaxi.png",
-    link: "https://apps.apple.com/tm/app/kerwen-taxi/id6759301850",
-    tags: ["#Android", "#iOS", "#CMP"],
-    category: "iOS",
-    description: "Taxi app for Turkmenistan",
-  },
 
   {
-    id: 4,
+    id: 3,
     title: "Kerwen Driver",
     image: "/kerwendriver.png",
     link: "https://play.google.com/store/apps/details?id=com.kerwen.driver",
@@ -52,15 +43,23 @@ const projects: Project[] = [
     description: "Taxi app for Turkmenistan",
   },
   {
-    id: 5,
+    id: 4,
     title: "elkitap",
-    image: "/elkitap.png",
+    image: "/elkitap2.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.elkitap&hl=tr",
     tags: ["#Android", "#iOS", "#Flutter"],
     category: "Android",
     description: "E-kitap okamak üçin niýetlenen interaktiw kitap okalga",
   },
-
+  {
+    id: 5,
+    title: "Tut courier (contributor: Shageldi Alyyew)",
+    image: "/tut_courier.png",
+    link: "",
+    tags: ["#Android", "Kotlin"],
+    category: "Android",
+    description: "Courier app for Tut water delivery service",
+  },
 
   {
     id: 6,
@@ -71,26 +70,37 @@ const projects: Project[] = [
     category: "Android",
     description: "A logistics app to track and manage shipments efficiently.",
   },
+
   {
     id: 7,
     title: "Aýdymçy",
-    image: "/musicl.png",
+    image: "/aydymcy2.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
     tags: ["#Android", "#iOS", "#KMP"],
     category: "Android",
     description: "Lyrics and music player app for discovering and listening to songs.",
   },
+
   {
     id: 8,
+    title: "Jaytap (App Support Specialist)",
+    image: "/jaytap.png",
+    link: "https://play.google.com/store/apps/details?id=com.gurbanov.jaytap",
+    tags: ["#Android", "#iOS", "#Flutter"],
+    category: "Android",
+    description: "Home selling and finding app for Turkmenistan",
+  },
+  {
+    id: 9,
     title: "Kebapchy Menu",
-    image: "/kebap.png",
+    image: "/kebapcy.png",
     link: "https://apps.apple.com/tm/app/kebapcy-menu/id6475279950",
     tags: ["#iOS", "#Flutter"],
     category: "iOS",
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 9,
+    id: 10,
     title: "UC DAÝY",
     image: "/ucdyy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
@@ -99,7 +109,7 @@ const projects: Project[] = [
     description: "Game app for Turkmenistan",
   },
   {
-    id: 10,
+    id: 11,
     title: "Balykcy Menu",
     image: "/balykchy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
@@ -109,7 +119,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 11,
+    id: 12,
     title: "Mado Menu",
     image: "/balykchy.png",
     link: "https://apps.apple.com/tm/app/pikir-menu5/id6475025463",
@@ -118,7 +128,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 12,
+    id: 13,
     title: "Gala Menu",
     image: "/gala.png",
     link: "https://apps.apple.com/tm/app/gala-menu5/id6474479694",
@@ -127,7 +137,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 13,
+    id: 14,
     title: "Ozan",
     image: "/ozan.png",
     link: "https://play.google.com/store/apps/details?id=com.tpsadvertising.ozan&hl=en",
@@ -137,7 +147,7 @@ const projects: Project[] = [
   },
 
   {
-    id: 14,
+    id: 15,
     title: "Picker",
     image: "/picker.png",
     link: "https://asmanexpress.com/",
@@ -146,8 +156,8 @@ const projects: Project[] = [
     description: "Picker App for AsmanExpres",
   },
   {
-    id: 15,
-    title: "DURALGA",
+    id: 16,
+    title: "DURALGA (App Support Specialis)",
     image: "/duralga.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.gps&hl=en",
     tags: ["#Android", "#iOS", "#Flutter"],
@@ -155,7 +165,7 @@ const projects: Project[] = [
     description: "App Support Specialist",
   },
   {
-    id: 16,
+    id: 17,
     title: "Onlaýn taksi (driver)",
     image: "/taxid.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.online_taxi_driver&hl=en",
@@ -166,7 +176,7 @@ const projects: Project[] = [
 
 
   {
-    id: 17,
+    id: 18,
     title: "Turkmenportal",
     image: "/portal.png",
     link: "https://turkmenportal.com/",
@@ -175,7 +185,7 @@ const projects: Project[] = [
     description: "Nov 2021 - Mar 2023 | Mobile developer",
   },
   {
-    id: 18,
+    id: 19,
     title: "Freelance jobs",
     image: "/freelance.png",
     link: "https://github.com/northernwolf00",
@@ -184,7 +194,7 @@ const projects: Project[] = [
     description: "Mar 2023 - May 2023 | Mobile developer",
   },
   {
-    id: 19,
+    id: 20,
     title: "Takyk Ulgam HJ",
     image: "/takyk.png",
     link: "https://takykulgam.com.tm/",
@@ -193,7 +203,7 @@ const projects: Project[] = [
     description: "Apr 2023 - Oct 2023 | Mobile developer",
   },
   {
-    id: 20,
+    id: 21,
     title: "Pikir",
     image: "/pikir.png",
     link: "https://www.pikir.biz/",
@@ -202,7 +212,7 @@ const projects: Project[] = [
     description: "Dec 2023 - Mar 2024 | Mobile developer",
   },
   {
-    id: 21,
+    id: 22,
     title: "Sanly Hyzmat",
     image: "/freelance.png",
     link: "",
@@ -252,66 +262,81 @@ export default function ProjectsSection() {
         </div>
 
         {/* Grid of Projects */}
-        <div className="w-full pb-6 sm:pb-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+        <div className="w-full pb-10 sm:pb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 sm:gap-8">
             {filteredProjects.map((project) => (
               <div
                 key={project.id}
-                className="group relative rounded-xl sm:rounded-2xl overflow-hidden bg-gradient-to-br from-white/5 to-white/[0.02] backdrop-blur-md border border-white/10 hover:border-cyan-400/40 transition-all duration-500 active:scale-[0.98] sm:hover:scale-[1.02] hover:shadow-2xl hover:shadow-cyan-500/20"
+                className="group relative flex flex-col h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-700 active:scale-[0.98] sm:hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(8,145,178,0.3)] shadow-2xl"
               >
-                {/* Image Container */}
-                <div className="relative w-full aspect-[16/10] sm:aspect-[4/3] overflow-hidden bg-gradient-to-br from-gray-800 to-gray-900">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
+                {/* Shine Sweep Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:animate-shimmer pointer-events-none z-20"></div>
 
-                  {/* Gradient Overlay on Hover */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end justify-center pb-4 sm:pb-6">
+                {/* Image Container with Icon Optimization */}
+                <div className={`relative w-full aspect-[1058/992] overflow-hidden bg-white flex items-center justify-center transition-colors duration-500 p-8 sm:p-12`}>
+                  <div className="relative w-full h-full flex items-center justify-center">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="max-w-full max-h-full object-contain drop-shadow-[0_10px_15px_rgba(0,0,0,0.1)] transition-all duration-700 group-hover:scale-110 group-hover:rotate-2"
+                    />
+                  </div>
+
+                  {/* Glass Overlay on Hover */}
+                  <div className="absolute inset-0 bg-cyan-950/40 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-all duration-700 z-10 flex items-center justify-center">
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-4 sm:px-6 py-2 sm:py-2.5 bg-cyan-500 hover:bg-cyan-400 active:bg-cyan-600 text-white text-sm sm:text-base font-semibold rounded-full transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 flex items-center gap-2 shadow-lg shadow-cyan-500/50"
+                      className="px-6 py-3 bg-white text-cyan-950 text-base font-bold rounded-full transform translate-y-8 group-hover:translate-y-0 transition-all duration-500 delay-100 flex items-center gap-2 shadow-xl hover:bg-cyan-50 active:scale-90"
                     >
-                      View Project
-                      <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      Explore Project
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
                     </a>
                   </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-3 sm:p-4 md:p-5">
+                {/* Content Area */}
+                <div className="relative p-5 sm:p-6 flex flex-col flex-grow z-10 bg-gradient-to-b from-transparent to-black/20">
+                  {/* Category Indicator */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]"></span>
+                    <span className="text-[10px] uppercase tracking-widest text-cyan-400/80 font-bold">{project.category}</span>
+                  </div>
+
                   {/* Title */}
-                  <h3 className="text-base sm:text-lg font-bold text-white mb-1.5 sm:mb-2 group-hover:text-cyan-400 transition-colors duration-300 line-clamp-1">
+                  <h3 className="text-xl sm:text-2xl font-black text-white mb-2.5 group-hover:text-cyan-300 transition-colors duration-300 flex items-center justify-between">
                     {project.title}
+                    <svg className="w-5 h-5 opacity-0 group-hover:opacity-50 -translate-x-2 group-hover:translate-x-0 transition-all duration-500 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
                   </h3>
 
                   {/* Description */}
-                  <p className="text-xs sm:text-sm text-gray-400 mb-3 sm:mb-4 line-clamp-2 leading-relaxed">
+                  <p className="text-sm text-gray-400/90 mb-6 line-clamp-3 leading-relaxed font-medium">
                     {project.description}
                   </p>
 
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
-                    {project.tags.map((tag, index) => (
-                      <span
-                        key={index}
-                        className="text-[10px] sm:text-xs px-2 sm:px-3 py-0.5 sm:py-1 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-300 rounded-full border border-cyan-500/30 font-medium hover:border-cyan-400/50 hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                  {/* Spacer to push tags to bottom */}
+                  <div className="mt-auto">
+                    {/* Tags */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="text-[10px] px-3 py-1.5 bg-white/5 text-gray-300 rounded-lg border border-white/10 font-bold hover:bg-cyan-500/10 hover:text-cyan-300 hover:border-cyan-500/30 transition-all duration-300"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                {/* Decorative gradient border glow */}
-                <div className="absolute inset-0 rounded-xl sm:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-                  <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 blur-xl"></div>
-                </div>
+                {/* Decorative Bloom Glow */}
+                <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-cyan-500/10 blur-[80px] rounded-full group-hover:bg-cyan-500/20 transition-all duration-700 pointer-events-none"></div>
               </div>
             ))}
           </div>
