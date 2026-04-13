@@ -182,20 +182,11 @@ const projects: Project[] = [
     link: "https://turkmenportal.com/",
     tags: ["#Mobile developer"],
     category: "Work",
-    description: "Nov 2021 - Oct 2023 | Mobile developer",
+    description: "Nov 2021 - Mar 2024 | Mobile developer",
   },
 
   {
     id: 19,
-    title: "Whale Apps",
-    image: "/whale.png",
-    link: "https://whaleapps.co/",
-    tags: ["#Mobile developer"],
-    category: "Work",
-    description: "Nov 2023 - Mar 2024 | Mobile developer",
-  },
-  {
-    id: 20,
     title: "Sanly Hyzmat",
     image: "/freelance.png",
     link: "",
