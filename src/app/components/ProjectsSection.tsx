@@ -12,9 +12,17 @@ type Project = {
 };
 
 const projects: Project[] = [
-
   {
     id: 1,
+    title: "Rahat Ulag",
+    image: "/rahat_ulag.png",
+    link: "https://play.google.com/store/apps/details?id=com.googadev.rahatulag&pcampaignid=web_share",
+    tags: ["#Android", "#iOS", "#CMP"],
+    category: "Android",
+    description: "Rahat Ulag — a modern taxi application designed for your daily commutes. It offers the easiest and most convenient way to travel within the city or between cities.",
+  },
+  {
+    id: 2,
     title: "Ahal Info",
     image: "/ahalinfo.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.ahal_info",
@@ -22,9 +30,8 @@ const projects: Project[] = [
     category: "Android",
     description: "Ahal Info is an application that provides information about Ahal province, Turkmenistan. It includes information about the province, its cities, districts, and other relevant information.",
   },
-
   {
-    id: 2,
+    id: 3,
     title: "Kerwen Taxi",
     image: "/kerwentaxi.png",
     link: "https://play.google.com/store/apps/details?id=com.kerwen.taxi",
@@ -32,9 +39,8 @@ const projects: Project[] = [
     category: "Android",
     description: "Taxi app for Turkmenistan",
   },
-
   {
-    id: 3,
+    id: 4,
     title: "Kerwen Driver",
     image: "/kerwendriver.png",
     link: "https://play.google.com/store/apps/details?id=com.kerwen.driver",
@@ -43,16 +49,16 @@ const projects: Project[] = [
     description: "Taxi app for Turkmenistan",
   },
   {
-    id: 4,
+    id: 5,
     title: "elkitap",
     image: "/elkitap2.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.elkitap&hl=tr",
     tags: ["#Android", "#iOS", "#Flutter"],
     category: "Android",
-    description: "E-kitap okamak üçin niýetlenen interaktiw kitap okalga",
+    description: "An interactive reader designed for reading e-books.",
   },
   {
-    id: 5,
+    id: 6,
     title: "Tut courier (contributor: Shageldi Alyyew)",
     image: "/tut_courier.png",
     link: "",
@@ -60,9 +66,8 @@ const projects: Project[] = [
     category: "Android",
     description: "Courier app for Tut water delivery service",
   },
-
   {
-    id: 6,
+    id: 7,
     title: "106 Cargo",
     image: "/cargo.png",
     link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
@@ -70,9 +75,8 @@ const projects: Project[] = [
     category: "Android",
     description: "A logistics app to track and manage shipments efficiently.",
   },
-
   {
-    id: 7,
+    id: 8,
     title: "Aýdymçy",
     image: "/aydymcy2.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
@@ -80,9 +84,8 @@ const projects: Project[] = [
     category: "Android",
     description: "Lyrics and music player app for discovering and listening to songs.",
   },
-
   {
-    id: 8,
+    id: 9,
     title: "Jaytap (App Support Specialist)",
     image: "/jaytap.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.jaytap",
@@ -91,7 +94,7 @@ const projects: Project[] = [
     description: "Home selling and finding app for Turkmenistan",
   },
   {
-    id: 9,
+    id: 10,
     title: "Kebapchy Menu",
     image: "/kebapcy.png",
     link: "https://apps.apple.com/tm/app/kebapcy-menu/id6475279950",
@@ -100,7 +103,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 10,
+    id: 11,
     title: "UC DAÝY",
     image: "/ucdyy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
@@ -109,7 +112,7 @@ const projects: Project[] = [
     description: "Game app for Turkmenistan",
   },
   {
-    id: 11,
+    id: 12,
     title: "Balykcy Menu",
     image: "/balykchy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
@@ -117,9 +120,8 @@ const projects: Project[] = [
     category: "iOS",
     description: "Digital menu app designed for restaurants.",
   },
-
   {
-    id: 12,
+    id: 13,
     title: "Mado Menu",
     image: "/balykchy.png",
     link: "https://apps.apple.com/tm/app/pikir-menu5/id6475025463",
@@ -128,7 +130,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 13,
+    id: 14,
     title: "Gala Menu",
     image: "/gala.png",
     link: "https://apps.apple.com/tm/app/gala-menu5/id6474479694",
@@ -137,7 +139,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 14,
+    id: 15,
     title: "Ozan",
     image: "/ozan.png",
     link: "https://play.google.com/store/apps/details?id=com.tpsadvertising.ozan&hl=en",
@@ -145,9 +147,8 @@ const projects: Project[] = [
     category: "Android",
     description: "eCommerce app, now updated for 2023 with Android & iOS support.",
   },
-
   {
-    id: 15,
+    id: 16,
     title: "Picker",
     image: "/picker.png",
     link: "https://asmanexpress.com/",
@@ -156,7 +157,7 @@ const projects: Project[] = [
     description: "Picker App for AsmanExpres",
   },
   {
-    id: 16,
+    id: 17,
     title: "DURALGA (App Support Specialis)",
     image: "/duralga.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.gps&hl=en",
@@ -165,7 +166,7 @@ const projects: Project[] = [
     description: "App Support Specialist",
   },
   {
-    id: 17,
+    id: 18,
     title: "Onlaýn taksi (driver)",
     image: "/taxid.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.online_taxi_driver&hl=en",
@@ -173,10 +174,8 @@ const projects: Project[] = [
     category: "Android",
     description: "App Support Specialist",
   },
-
-
   {
-    id: 18,
+    id: 19,
     title: "Turkmenportal",
     image: "/portal.png",
     link: "https://turkmenportal.com/",
@@ -184,19 +183,15 @@ const projects: Project[] = [
     category: "Work",
     description: "Nov 2021 - Mar 2024 | Mobile developer",
   },
-
   {
-    id: 19,
+    id: 20,
     title: "Sanly Hyzmat",
     image: "/freelance.png",
     link: "",
     tags: ["#Mobile developer"],
     category: "Work",
     description: "Mar 2024 - Dec 2024 | Mobile developer",
-  },
-
-
-
+  }
 ];
 
 const categories = ["All", "Android", "iOS", "Work"];
