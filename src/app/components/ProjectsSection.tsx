@@ -59,7 +59,16 @@ const projects: Project[] = [
   },
   {
     id: 6,
-    title: "Tut courier (contributor: Shageldi Alyyew)",
+    title: "sakura_epub",
+    image: "/sakura_epub2.png",
+    link: "https://pub.dev/packages/sakura_epub",
+    tags: ["#Android", "#iOS", "#Flutter"],
+    category: "Android",
+    description: "A powerful Flutter package for rendering EPUB books inside your app",
+  },
+  {
+    id: 7,
+    title: "Tut courier (contributor: Sh.Alyyew)",
     image: "/tut_courier.png",
     link: "",
     tags: ["#Android", "Kotlin"],
@@ -67,7 +76,7 @@ const projects: Project[] = [
     description: "Courier app for Tut water delivery service",
   },
   {
-    id: 7,
+    id: 8,
     title: "106 Cargo",
     image: "/cargo.png",
     link: "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
@@ -76,7 +85,7 @@ const projects: Project[] = [
     description: "A logistics app to track and manage shipments efficiently.",
   },
   {
-    id: 8,
+    id: 9,
     title: "Aýdymçy",
     image: "/aydymcy2.png",
     link: "https://play.google.com/store/apps/details?id=com.googadev.lyrics_app&hl=en",
@@ -85,7 +94,7 @@ const projects: Project[] = [
     description: "Lyrics and music player app for discovering and listening to songs.",
   },
   {
-    id: 9,
+    id: 10,
     title: "Jaytap (App Support Specialist)",
     image: "/jaytap.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.jaytap",
@@ -94,7 +103,7 @@ const projects: Project[] = [
     description: "Home selling and finding app for Turkmenistan",
   },
   {
-    id: 10,
+    id: 11,
     title: "Kebapchy Menu",
     image: "/kebapcy.png",
     link: "https://apps.apple.com/tm/app/kebapcy-menu/id6475279950",
@@ -103,7 +112,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 11,
+    id: 12,
     title: "UC DAÝY",
     image: "/ucdyy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
@@ -112,7 +121,7 @@ const projects: Project[] = [
     description: "Game app for Turkmenistan",
   },
   {
-    id: 12,
+    id: 13,
     title: "Balykcy Menu",
     image: "/balykchy.png",
     link: "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
@@ -121,7 +130,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 13,
+    id: 14,
     title: "Mado Menu",
     image: "/balykchy.png",
     link: "https://apps.apple.com/tm/app/pikir-menu5/id6475025463",
@@ -130,7 +139,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 14,
+    id: 15,
     title: "Gala Menu",
     image: "/gala.png",
     link: "https://apps.apple.com/tm/app/gala-menu5/id6474479694",
@@ -139,7 +148,7 @@ const projects: Project[] = [
     description: "Digital menu app designed for restaurants.",
   },
   {
-    id: 15,
+    id: 16,
     title: "Ozan",
     image: "/ozan.png",
     link: "https://play.google.com/store/apps/details?id=com.tpsadvertising.ozan&hl=en",
@@ -148,7 +157,7 @@ const projects: Project[] = [
     description: "eCommerce app, now updated for 2023 with Android & iOS support.",
   },
   {
-    id: 16,
+    id: 17,
     title: "Picker",
     image: "/picker.png",
     link: "https://asmanexpress.com/",
@@ -157,7 +166,7 @@ const projects: Project[] = [
     description: "Picker App for AsmanExpres",
   },
   {
-    id: 17,
+    id: 18,
     title: "DURALGA (App Support Specialis)",
     image: "/duralga.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.gps&hl=en",
@@ -166,7 +175,7 @@ const projects: Project[] = [
     description: "App Support Specialist",
   },
   {
-    id: 18,
+    id: 19,
     title: "Onlaýn taksi (driver)",
     image: "/taxid.png",
     link: "https://play.google.com/store/apps/details?id=com.takykcheshme.online_taxi_driver&hl=en",
@@ -175,7 +184,7 @@ const projects: Project[] = [
     description: "App Support Specialist",
   },
   {
-    id: 19,
+    id: 20,
     title: "Turkmenportal",
     image: "/portal.png",
     link: "https://turkmenportal.com/",
@@ -184,7 +193,7 @@ const projects: Project[] = [
     description: "Nov 2021 - Mar 2024 | Mobile developer",
   },
   {
-    id: 20,
+    id: 21,
     title: "Sanly Hyzmat",
     image: "/freelance.png",
     link: "",
