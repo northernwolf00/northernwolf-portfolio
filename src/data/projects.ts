@@ -49,6 +49,7 @@ export const projects: Project[] = [
     links: {
       playStore:
         "https://play.google.com/store/apps/details?id=com.googadev.rahatulag",
+      appStore: "https://apps.apple.com/tm/app/rahat-ulag/id6775177997",
     },
     featured: true,
     year: "2026",
@@ -142,6 +143,7 @@ export const projects: Project[] = [
     links: {
       playStore:
         "https://play.google.com/store/apps/details?id=com.googadev.elkitap&hl=tr",
+      appStore: "https://apps.apple.com/tm/app/elkitap/id6755152607",
     },
     featured: false,
     image: "/elkitap2.png",
@@ -192,6 +194,7 @@ export const projects: Project[] = [
     links: {
       playStore:
         "https://play.google.com/store/apps/details?id=com.googadev.ahal_info",
+      appStore: "https://apps.apple.com/tm/app/ahal-info/id6761262219",
     },
     featured: false,
     image: "/ahalinfo.png",
@@ -205,6 +208,7 @@ export const projects: Project[] = [
     tech: ["#Android", "#iOS", "#CMP"],
     links: {
       playStore: "https://play.google.com/store/apps/details?id=com.kerwen.taxi",
+      appStore: "https://apps.apple.com/tm/app/kerwen-taxi/id6759301850",
     },
     featured: false,
     image: "/kerwentaxi.png",
@@ -244,6 +248,7 @@ export const projects: Project[] = [
     links: {
       playStore:
         "https://play.google.com/store/apps/details?id=guwanchaldurdyyewProduct.kargo_app&hl=en",
+      appStore: "https://apps.apple.com/tm/app/106-cargo/id6474175362",
     },
     featured: false,
     image: "/cargo.png",
@@ -258,6 +263,7 @@ export const projects: Project[] = [
     links: {
       playStore:
         "https://play.google.com/store/apps/details?id=com.gurbanov.jaytap",
+      appStore: "https://apps.apple.com/tm/app/ja%C3%BD-tap/id6751713059",
     },
     featured: false,
     image: "/jaytap.png",
@@ -367,6 +373,7 @@ export const projects: Project[] = [
     links: {
       playStore:
         "https://play.google.com/store/apps/details?id=com.takykcheshme.gps&hl=en",
+      appStore: "https://apps.apple.com/tm/app/duralga/id1607990462",
     },
     featured: false,
     image: "/duralga.png",
