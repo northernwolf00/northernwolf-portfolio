@@ -1,4 +1,4 @@
-import { Github, Package, ExternalLink } from "lucide-react";
+import { Github, Package, ExternalLink, Globe } from "lucide-react";
 import type { Project } from "@/data/projects";
 
 type LinkDef = { key: keyof Project["links"]; label: string };
@@ -14,6 +14,7 @@ const linkDefs: LinkDef[] = [
 function IconFor(key: keyof Project["links"]) {
   if (key === "github") return Github;
   if (key === "pubDev") return Package;
+  if (key === "website") return Globe;
   return ExternalLink;
 }
 
@@ -27,7 +28,7 @@ export default function ProjectLinks({ project }: { project: Project }) {
   if (available.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-2 pt-1">
       {available.map(({ key, label }) => {
         const Icon = IconFor(key);
         return (
@@ -36,13 +37,14 @@ export default function ProjectLinks({ project }: { project: Project }) {
             href={project.links[key]}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs sm:text-sm px-3 py-1.5 rounded-lg bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-medium hover:bg-cyan-500/20 transition-all active:scale-95"
+            className="inline-flex items-center gap-2 text-xs sm:text-sm px-3.5 py-2 rounded-xl bg-cyan-500/10 text-cyan-300 border border-cyan-500/30 font-medium hover:bg-cyan-500/20 hover:border-cyan-400/60 transition-all active:scale-95 shadow-sm"
           >
-            <Icon className="w-3.5 h-3.5" />
-            {label}
+            <Icon className="w-4 h-4 text-cyan-400" />
+            <span>{label}</span>
           </a>
         );
       })}
     </div>
   );
 }
+

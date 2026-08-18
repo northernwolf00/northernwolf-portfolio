@@ -95,6 +95,7 @@ export const projects: Project[] = [
     tech: ["Flutter", "Dart"],
     links: {
       pubDev: "https://pub.dev/packages/sakura_epub",
+      github: "https://github.com/northernwolf00/sakura_epub",
     },
     featured: true,
     year: "2025",

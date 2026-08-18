@@ -36,11 +36,10 @@ export default function ProjectsGrid() {
             role="tab"
             aria-selected={active === key}
             onClick={() => setActive(key)}
-            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all active:scale-95 ${
-              active === key
+            className={`px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-xs sm:text-sm font-medium transition-all active:scale-95 ${active === key
                 ? "bg-cyan-500 text-white shadow-lg shadow-cyan-500/30"
                 : "bg-white/10 backdrop-blur-md text-gray-200 hover:bg-cyan-600 hover:text-white border border-white/20"
-            }`}
+              }`}
           >
             {label}
           </button>
