@@ -303,8 +303,7 @@ export const projects: Project[] = [
     category: ["mobile"],
     tech: ["#iOS", "#Flutter"],
     links: {
-      playStore:
-        "https://play.google.com/store/apps/details?id=com.gurbanov.ucdayy&hl=en",
+      appStore: "https://apps.apple.com/tm/app/balykcy-menu/id6473086500",
     },
     featured: false,
     image: "/balykchy.png",
@@ -411,7 +410,8 @@ const screenshotCounts: Record<string, number> = {
   "onlayn-taksi-driver": 3,
   "kebapchy-menu": 3,
   "mado-menu": 3,
-  "gala-menu": 4,
+  "gala-menu": 3,
+  "balykcy-menu": 3,
 };
 
 for (const p of projects) {
