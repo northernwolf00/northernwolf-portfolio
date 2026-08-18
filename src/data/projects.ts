@@ -18,7 +18,9 @@ export type Project = {
   year?: string;
   /** Optional card image (falls back to a lucide icon when absent). */
   image?: string;
-  /** Detail-page content. Presence of this field gives the project a /projects/[slug] page. */
+  /** Screenshot gallery paths (real store screenshots, populated below). */
+  screenshots?: string[];
+  /** Rich detail content shown on the /projects/[slug] page when present. */
   detail?: {
     problem: string;
     whatIBuilt: string;
@@ -385,8 +387,38 @@ export const projects: Project[] = [
   },
 ];
 
-/** Projects that have a dedicated /projects/[slug] detail page. */
-export const flagshipProjects = projects.filter((p) => p.detail);
+// Real store screenshots downloaded to /public/screenshots/<slug>/N.jpg.
+// Keyed by slug → number of screenshots available.
+const screenshotCounts: Record<string, number> = {
+  "rahat-ulag": 7,
+  aydymcy: 4,
+  elkitap: 8,
+  "ahal-info": 5,
+  "kerwen-taxi": 6,
+  "kerwen-driver": 7,
+  "106-cargo": 7,
+  jaytap: 5,
+  "uc-dayy": 6,
+  ozan: 8,
+  duralga: 7,
+  "onlayn-taksi-driver": 3,
+  "kebapchy-menu": 3,
+  "mado-menu": 3,
+  "gala-menu": 4,
+};
+
+for (const p of projects) {
+  const n = screenshotCounts[p.slug];
+  if (n) {
+    p.screenshots = Array.from(
+      { length: n },
+      (_, i) => `/screenshots/${p.slug}/${i + 1}.jpg`,
+    );
+  }
+}
+
+/** Every project now has a detail page. */
+export const flagshipProjects = projects;
 
 export const featuredProjects = projects.filter((p) => p.featured);
 

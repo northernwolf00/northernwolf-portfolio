@@ -2,12 +2,12 @@ import Link from "next/link";
 import { ArrowRight, AppWindow } from "lucide-react";
 import type { Project } from "@/data/projects";
 import { categoryLabels } from "@/data/projects";
-import ProjectLinks, { primaryLink } from "./ProjectLinks";
+import ProjectLinks from "./ProjectLinks";
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const hasDetail = Boolean(project.detail);
-  const detailHref = hasDetail ? `/projects/${project.slug}` : undefined;
-  const mainExternalHref = !hasDetail ? primaryLink(project) : undefined;
+  // Every project has its own detail page now.
+  const detailHref = `/projects/${project.slug}`;
+  const mainExternalHref: string | undefined = undefined;
 
   return (
     <div className="group relative flex flex-col h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white/5 backdrop-blur-xl border border-white/10 hover:border-cyan-400/50 transition-all duration-500 hover:shadow-[0_20px_50px_rgba(8,145,178,0.3)] shadow-2xl">

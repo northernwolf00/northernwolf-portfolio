@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ImageIcon } from "lucide-react";
-import { flagshipProjects, getProject } from "@/data/projects";
-import { categoryLabels } from "@/data/projects";
+import { ArrowLeft, AppWindow } from "lucide-react";
+import { flagshipProjects, getProject, categoryLabels } from "@/data/projects";
 import SiteHeader from "../../components/SiteHeader";
 import SiteFooter from "../../components/SiteFooter";
 import ProjectLinks from "../../components/ProjectLinks";
+import ScreenshotGallery from "../../components/ScreenshotGallery";
 
 type Params = { slug: string };
 
@@ -23,7 +24,7 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
 
-  const image = project.image ?? "/horse2.png";
+  const image = project.screenshots?.[0] ?? project.image ?? "/horse2.png";
   return {
     title: project.name,
     description: project.tagline,
@@ -49,7 +50,7 @@ export default async function ProjectDetailPage({
   const { slug } = await params;
   const project = getProject(slug);
 
-  if (!project || !project.detail) {
+  if (!project) {
     notFound();
   }
 
@@ -72,21 +73,40 @@ export default async function ProjectDetailPage({
 
           {/* Header */}
           <header className="mb-10">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
-              <span className="text-[10px] uppercase tracking-widest text-cyan-400/80 font-bold">
-                {project.category.map((c) => categoryLabels[c]).join(" · ")}
-              </span>
-              {project.year && (
-                <span className="text-[10px] font-mono text-gray-500">
-                  · {project.year}
-                </span>
-              )}
+            <div className="flex items-start gap-4 mb-4">
+              {/* App icon */}
+              <div className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-2xl overflow-hidden bg-white/5 border border-white/10 flex items-center justify-center">
+                {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`${project.name} icon`}
+                    width={80}
+                    height={80}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <AppWindow className="w-8 h-8 text-cyan-500/50" aria-hidden="true" />
+                )}
+              </div>
+
+              <div className="min-w-0">
+                <div className="flex flex-wrap items-center gap-2 mb-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.8)]" />
+                  <span className="text-[10px] uppercase tracking-widest text-cyan-400/80 font-bold">
+                    {project.category.map((c) => categoryLabels[c]).join(" · ")}
+                  </span>
+                  {project.year && (
+                    <span className="text-[10px] font-mono text-gray-500">
+                      · {project.year}
+                    </span>
+                  )}
+                </div>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight">
+                  {project.name}
+                </h1>
+              </div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-              {project.name}
-            </h1>
             <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mb-6">
               {project.tagline}
             </p>
@@ -106,44 +126,52 @@ export default async function ProjectDetailPage({
             <ProjectLinks project={project} />
           </header>
 
-          {/* The problem */}
-          <Section title="The problem">
-            <p className="text-gray-300 leading-relaxed">{detail.problem}</p>
-          </Section>
+          {/* Overview (fallback when no rich detail is written yet) */}
+          {!detail && project.description && (
+            <Section title="Overview">
+              <p className="text-gray-300 leading-relaxed">
+                {project.description}
+              </p>
+            </Section>
+          )}
 
-          {/* What I built */}
-          <Section title="What I built">
-            <p className="text-gray-300 leading-relaxed">{detail.whatIBuilt}</p>
-          </Section>
+          {detail && (
+            <>
+              <Section title="The problem">
+                <p className="text-gray-300 leading-relaxed">{detail.problem}</p>
+              </Section>
 
-          {/* Technical challenges */}
-          <Section title="Technical challenges">
-            <ul className="flex flex-col gap-3">
-              {detail.challenges.map((challenge, i) => (
-                <li key={i} className="flex items-start gap-3 text-gray-300 leading-relaxed">
-                  <span className="mt-2 shrink-0 w-1.5 h-1.5 rounded-full bg-cyan-400" />
-                  <span>{challenge}</span>
-                </li>
-              ))}
-            </ul>
-          </Section>
+              <Section title="What I built">
+                <p className="text-gray-300 leading-relaxed">
+                  {detail.whatIBuilt}
+                </p>
+              </Section>
 
-          {/* Screenshots gallery — placeholder slots */}
-          <Section title="Screenshots">
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <div
-                  key={i}
-                  className="aspect-[9/16] rounded-2xl bg-white/5 border border-dashed border-white/15 flex flex-col items-center justify-center gap-2 text-gray-500"
-                >
-                  <ImageIcon className="w-6 h-6" aria-hidden="true" />
-                  <span className="text-[10px] uppercase tracking-widest font-bold">
-                    TODO: image
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Section>
+              <Section title="Technical challenges">
+                <ul className="flex flex-col gap-3">
+                  {detail.challenges.map((challenge, i) => (
+                    <li
+                      key={i}
+                      className="flex items-start gap-3 text-gray-300 leading-relaxed"
+                    >
+                      <span className="mt-2 shrink-0 w-1.5 h-1.5 rounded-full bg-cyan-400" />
+                      <span>{challenge}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+            </>
+          )}
+
+          {/* Screenshots — real store screenshots when available */}
+          {project.screenshots && project.screenshots.length > 0 && (
+            <Section title="Screenshots">
+              <ScreenshotGallery
+                screenshots={project.screenshots}
+                name={project.name}
+              />
+            </Section>
+          )}
         </article>
       </main>
 
