@@ -162,11 +162,28 @@ export const projects: Project[] = [
     name: "Garagum Racing",
     tagline:
       "Physics-based racing game across four Turkmenistan landscapes.",
+    description:
+      "A physics-based racing game built with Flutter and the Flame engine, racing across four landscapes inspired by Turkmenistan.",
     category: ["game"],
     tech: ["Flutter", "Flame", "Forge2D", "RevenueCat"],
-    links: {},
+    links: {
+      playStore:
+        "https://play.google.com/store/apps/details?id=com.googadev.garagum_racing",
+    },
     featured: false,
     year: "2026",
+    image: "/garagum_racing.png",
+    detail: {
+      problem:
+        "Building a smooth, physics-driven racing game on Flutter without a native game engine.",
+      whatIBuilt:
+        "A 2D racing game using the Flame engine with Forge2D for vehicle and terrain physics, four themed levels, and in-app purchases via RevenueCat.",
+      challenges: [
+        "Tuning Forge2D physics for responsive, fun car handling.",
+        "Keeping a steady frame rate on lower-end Android devices.",
+        "Designing progression and monetisation with RevenueCat.",
+      ],
+    },
   },
   {
     slug: "fitfriend",
@@ -397,6 +414,7 @@ export const projects: Project[] = [
 // Keyed by slug → number of screenshots available.
 const screenshotCounts: Record<string, number> = {
   "rahat-ulag": 7,
+  "garagum-racing": 5,
   aydymcy: 4,
   elkitap: 8,
   "ahal-info": 5,

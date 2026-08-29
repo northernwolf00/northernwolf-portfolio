@@ -6,6 +6,19 @@ import ProjectCard from "../components/ProjectCard";
 
 type Filter = "all" | ProjectCategory;
 
+// Pinned order: these appear first (in this order); everything else keeps its
+// original position afterwards.
+const pinnedOrder = ["rahat-ulag", "elkitap"];
+
+const orderedProjects = [...projects].sort((a, b) => {
+  const ai = pinnedOrder.indexOf(a.slug);
+  const bi = pinnedOrder.indexOf(b.slug);
+  if (ai === -1 && bi === -1) return 0;
+  if (ai === -1) return 1;
+  if (bi === -1) return -1;
+  return ai - bi;
+});
+
 const filters: { key: Filter; label: string }[] = [
   { key: "all", label: "All" },
   { key: "mobile", label: "Mobile" },
@@ -19,8 +32,8 @@ export default function ProjectsGrid() {
 
   const filtered =
     active === "all"
-      ? projects
-      : projects.filter((p) => p.category.includes(active));
+      ? orderedProjects
+      : orderedProjects.filter((p) => p.category.includes(active));
 
   return (
     <>
